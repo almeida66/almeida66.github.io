@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="firewall, freesco">
+
+    <title>router</title>
+     <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+          <div class="nav">
+      <ul>
+        <li class="linux"><a href="linux.htm">Linux</a></li>
+        <li class="ibml40"><a href="ibml40sx.htm">IBM L40sx</a></li>
+        <li class="router"><a href="router.htm" class="active">Firewall Router</a></li>
+        <li class="mca"><a href="hardware.htm">MCA hardware</a></li>
+        <li class="ppc"><a href="ppc.htm">linux PPC</a></li>
+        <li class="down"><a href="hardware.htm">Downloads</a></li>
+      </ul>
+    </div>
+    <br>
+    <h3>
+      Sicherheit im Internet - <font size="+0">oder wie richte ich
+        einen firewall-Router
+        für daheim</font></h3>
+    <p><br>
+      Damit das mal deutlich wird: <b><i>Jeder der eine Verbindung
+          zum Internet aufbaut ist Teil des Internets!</i></b>
+      <br>
+      Und somit angreifbar. Wer Lust hat, kann ja mal die Demo-Seite von
+      <a href="http://www.guninski.com">Georgi Guninski</a> besuchen. Hier wird
+      eindrucksvoll gezeigt, wie man z.B. den Festplatteninhalt auslesen kann.
+    </p>
+    <p>Zugegeben, hier kommt es sehr auf die verwendeten Einstellungen des
+      Browsers und natürlich der aufgesuchten <i>böhzen</i> Seiten
+      an. Aber ohne Java wird man heutzutage nicht mehr viel auf dem Bildschirm
+      erkennen. Durch die Vergabe von dyn. IP-Adressen durch den Provider ist
+      der Normalanwender auch weiter auf der vermeintlich sicheren Seite.
+      <br>
+      
+    </p>
+    <p>Der Normalanwender (wozu ich mich auch zähle) hat einen PC,
+      Standard-Software
+      und Modem/ISDN. Jeder, der die Pressemeldungen verfolgt, hört z.B.
+      von Internet-Angriffen auf Yahoo, Download-Überwachung durch Microsoft
+      usw.
+    </p>
+    <p>Spätestens hier sollte man die Anschaffung einer Firewall-Lösung
+      in Betracht ziehen. Was das ist ? Frei übersetzt ist eine firewall
+      ein Schutz gegen unberechtigtes Eindringen z.B. in einem lokalem Netzwerk.
+      Hier gibt es viele Möglichkeiten von Firewall-Router bis 
+      Proxy-Firewall.
+    </p>
+    <p>Was man braucht ? In diesem Beispiel: 2 Netzwerkkarten, 1
+      Crossover-Netzwerkkabel
+      und einen Zweit-PC (ab 486 mit 8MB RAM). Kostenpunkt ca. 70,-DM und den
+      alten PC vom Keller wieder flott machen :-) .
+    </p>
+    <p>Da ich selbst kein Programmier-As bin, habe ich nach kostenlosen
+      Fertig-Lösungen
+      gesucht und gefunden. Anbei eine kleine Auflistung:
+      <br>
+      
+    </p>
+    <nav>
+    <ul>
+      <li>
+        <a href="http://www.freesco.org">FREESCO</a></li>
+      <li>
+        <a href="http://www.coyotelinux.com">Coyote</a></li>
+      <li>
+        <a href="http://www.zelow.no/floppyfw/">floppyfw</a></li>
+      <li>
+        <a href="http://web.archive.org/web/20020207120108/http://mpsdr.unx.nu/MINI/">Dialup
+          router-MINI</a></li>
+      <li>
+        <a href="http://web.archive.org/web/20101210013003/http://lightning.prohosting.com/%7Enormr/">normr
+          firewall/router</a></li>
+      <li>
+        <a href="http://web.archive.org/web/20010308181721/http://edge.fireplug.net/">edge-fireplug</a></li>
+      <li>
+        u.v.m</li>
+    </ul>
+    </nav>
+    <a>
+    Bei den obengenannten Programmen handelt es sich natürlich :) um Linux
+    Distributionen, die aber zum Teil auf 1 (-3) Disketten passen und sogar
+    ohne Festplatte auskommen. Wer unbedingt auf Microsoft basierende Software
+    schwört, der sollte den <a href="http://www.janaserver.de">Jana-Server
+    </a>ausprobieren. Zum Vergleich kann man die Lightversion der Kaufsoftware
+    <a href="http://www.gnatbox.com">GNATbox</a> testen.
+    <p>Wer einen leistungsstarken Zweit-PC hat, kann natürlich eine vollwertige
+      Linux-Distribution verwenden und z.B. mit <a href="http://www.samba.org">Samba</a>,
+      ipfwadm und tcpd einen ähnlichen Schutz aufbauen. Wie auch immer man
+      sich für eine Variante entscheidet, ich setze <a href="http://www.freesco.org">FREESCO</a>
+      ein und bin mehr als zufrieden.
+    </p>
+    <p>FREESCO hat den Vorteil mit nur einer Diskette auszukommen und ist schon
+      mit einem 386SX lauffähig. Es wird aber ein 486 mit 16MB RAM empfohlen;
+      ich verwende nur 8MB RAM, habe aber Swap eingerichtet. FREESCO kann man
+      nämlich auch auf einer DOS Umgebung installieren.
+    </p>
+    <p>Also, was ist zu tun ?
+    </p>
+    <p>Imagedatei, driver und rawrite downloaden und in DOS-Umgebung die
+      Installationsdiskette
+      mit rawrite erstellen. Netzwerkkarten einbauen und installieren; beim
+      "Zweit-PC"
+      eventuell nur DOS installieren und Modem anschließen. Danach von
+      Diskette booten und nach der üblichen root/root Eingabeaufforderung
+      <b>setup</b> eingeben.
+    </p>
+    <p>Als Netzwerkkarten werden standardmäßig 3Com und Ne2000 und
+      kompatible erkannt, ansonsten ist die Driver-Datei einzusetzen. Bei
+      modernen
+      Netzwerkarten werden die IRQ-Einstellungen oft per Software festgelegt.
+      Hier ist es ratsam die Adresse per Jumper/ Programm fest vorzugeben, z.B.
+      io=0x280, irq=5.
+    </p>
+    <p>Für die Nutzung auf Festplatte wird der Befehl <b>move2hdd</b>
+      eingegeben; die Software wird auf einer UMSDOS Umgebung installiert und
+      beim Booten mit Ausführung von <b>router.bat</b> gestartet. Niemals
+      von der DOS Umgebung in den Dateien rumpfuschen!
+    </p>
+    <p>Die ganze Konfiguration wird menuegeführt eingeben und ist relativ
+      einfach in der <a href="http://www.freesco.org">Dokumentation</a>
+      des Herstellers nachzuvollziehen. Die Docu ist aber noch nicht fertig,
+      da die Software noch im Beta-Stadium ist.
+    </p>
+    <p>Die Hauptschwierigkeit liegt in der Konfiguration der Clients (hier
+      Win9x); da bin ich auch gestolpert... Als Netzwerksoftware ist nur TCP/IP
+      zu installieren! Die hoffentlich richtig erkannte Netzwerkkarte benötigt
+      folgende Einstellungen: IP-Adresse (192.168.xxx.xxx), unter Gateway und
+      DNS die IP-Adresse des <u>Routers</u> (192.168.xxx.yyy), als Domain
+      standardmäßig
+      <i>inet</i> und als Hostname z.B. <i>router.inet</i> eintragen. Der
+      Client
+      sollte unter Identifikation auch einen Namen haben.
+    </p>
+    <p>Damit sollte es klappen. Beide Systeme booten. Im Client die Verbindung
+      mit <b>ping</b> 192.168.xxx.yyy testen. Dann den Internet-Browser starten
+      und die Adresse des Routers eingeben, Port 82 (192.168.xxx.yyy:82). Voilá,
+      der <a href="http://www.acme.com">httpd</a> sollte sich jetzt melden! Ja,
+      diese Software bietet auch eine Administration per Web-Client. Wer sein
+      Homepage-Layout unter "echten" Bedingungen testen will, kann nachträglich
+      den httpd unter <b>setup/advanced</b> auch für die "Aussenwelt"
+      aktivieren
+      und alle Dateien unter /mnt/www ablegen.
+    </p>
+    <p>Zur Zeit bietet die Software folgendes an: DNS-, DHCP-, Time-, Telnet-,
+      Web-, Print- und RemoteAccess Serverdienste.
+    </p>
+    <p>Für die Festplatten-Installation sind Erweiterungen wie eine Datenbank
+      <a href="http://www.Hughes.com.au">mSQL</a> oder den <a href="http://www.gnome.org/">MidnightCommander</a>
+      möglich. Zu beachten gilt die Verwendung von libc5-Packages und das
+      Ablegen der Binaries unter /mnt/router/rc sowie die Anpassung der <i>rc_user</i>
+      Datei. Wie gesagt, das System arbeitet vollständig im RAM. D.h. das
+      Rootverzeichnis <b>/</b> ist quasi virtuell und wird bei jedem Neustart
+      aufgebaut. Alle im Rootverzeichnis vorher durchgeführten Veränderungen
+      gehen verloren.
+    </p>
+    <p>Wer nun sein mini-Netzwerk prüfen will, der kann auf <a href="ftp://ftp.porcupine.org/pub/security/index.html">satan</a>,
+      <a href="http://www.wwdsi.com/saint">saint</a> oder <a href="http://www.nessus.org">nessus</a>
+      zurückgreifen. Und nicht vergessen alle Passwörter der registrierten
+      User mit <b>passwd</b> zu ändern.
+    </p>
+    <p>Mit dieser Arbeit ist der Sonntagnachmittag gerettet und man ist
+      ungetrübten WWW-Ausflügen ein bißchen näher gekommen.
+      <br>
+     
+      <br>
+      
+      <br>
+      <br>
+      <br>
+      <br>
+    </p>
+    <center>
+      <p><a href="http://www.freesco.org"><img src="../images/freesco.gif" alt="freesco"
+
+            nosave="" width="468" height="60" border="0"></a></p>
+    </center>
+  </body>
+</html>

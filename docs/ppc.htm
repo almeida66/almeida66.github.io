@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de-de">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title>linux ppc</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+          <div class="nav">
+      <ul>
+        <li class="linux"><a href="linux.htm">Linux</a></li>
+        <li class="ibml40"><a href="ibml40sx.htm">IBM L40sx</a></li>
+        <li class="router"><a href="router.htm">Firewall Router</a></li>
+        <li class="mca"><a href="hardware.htm">MCA hardware</a></li>
+        <li class="ppc"><a href="ppc.htm" class="active">linux PPC</a></li>
+        <li class="down"><a href="hardware.htm">Downloads</a></li>
+      </ul>
+    </div>
+    <br>
+    <h1>Uch, es ist ein PowerPC</h1>
+    
+    nein, kein neues Spiel, sondern eine sog. CPU-Architektur, die durch Apple,
+    IBM und ehem. Motorola entwickelt/spezifiziert wurde. (Nicht zu verwechseln
+    mit x86, dem standard Intel Zeugs).<br>
+    <br>
+    Ich habe diese Seite mit einem PPC 750 (ibook G3 und iMac G3)
+    bearbeitet.<a href="http://apple.com/mac"><img style="border: 0px solid ; width: 116px; height: 54px;"
+
+        alt="iMac G3" src="../images/imac_g3.gif" align="middle"></a><br>
+    <br>
+    Es geht hier hauptsächlich um letzteren, dem iMac G3. Die Teile sind
+    mittlerweile in den Auktionshäusern so preiswert zu bekommen, dass ich
+    nicht nein sagen konnte. Ich will zudem nicht verleugnen, dass mich die
+    heutigen Prozessortaktorgien kaum interessieren. Man kommt heute wunderbar
+    mit lüfterlosen und energiesparende CPU's aus.<br>
+    <br>
+    Mein iMac G3 (<a href="http://lowendmac.com/roadapples/imac-350.html">350
+      MHz, Indigo, slot loading</a>) ist schon etwas betagt und hat den
+    Transport nicht ganz unbeschadet überstanden. Dank Internet und <a href="http://www.ifixit.com">Ifixit</a>
+    findet man die notwendigen Informationen, um das Gehäuse einigermassen
+    intakt zu öffnen und fast ohne Verluste zu schliessen. <br>
+    Zudem sollte selbiger mit einer aktuellen HDD, mehr RAM und einer
+    Airportkarte samt Steckplatzadapter aufgerüstet werden.<br>
+    <a href="../images/imac2.jpg"><img style="border: 0px solid ; width: 240px; height: 180px;"
+
+        alt="" src="../images/imac2.jpg"></a><a href="../images/imac1.jpg"><img
+
+        style="border: 0px solid ; width: 240px; height: 180px;" alt="" src="../images/imac1.jpg">
+    </a><a name="ibook_g3"></a><a href="../images/ibookg3.png"><img style="border: 0px solid ; width: 240px; height: 180px;"
+
+        alt="ibook g3" src="../images/ibookg3.png"></a><br>
+    <br>
+    Ich weiss nicht wie man die "Kunststoffblende" um die Bildröhre nennt,
+    jedenfalls war diese z.T. angerissen und wurde von mir mit Kleber und grauem
+    Panzerband verklebt. Durch das matt-weisse Umgehäuse sieht man eh kaum den
+    Unterschied. <br>
+    <br>
+    Als erstes mittels Mac OS 9 die Firmware aktualisiert (wichtig für
+    Airport-Updates mit WPA); danach folgte die Installation mit Mac OS 10.3.9
+    (mehr geht nicht). Hm, Safari stürzt ständig ab; nee, Explorer will ich da
+    nicht haben... nach längerer Suche und Tests soll es wohl der Camino-Browser
+    werden. Noch ein paar Addons und der kultige standalone Rechner ist fertig.<br>
+    <br>
+    Wie bereits im <a href="http://almeida-blog.uk.to/blog/pup_pplog.pl">blog</a>
+    angedeutet, gehören obige Macs zu den NewWorld mit der
+    sog. OpenFirmware. D.h. ich kann hier mit yaboot (einem Bootloader)
+    Linux parallel zu Mac OS installieren. Nachdem <a href="http://penguinppc.org/">penguin
+      ppc</a> und <a href="http://mac.linux.be/">mac linux</a> ordentliche
+    Angaben bereithalten, fiel die Wahl auf debian/ppc. Nun, die Distri habe ich
+    schon immer verwendet und finde mich da gut zurecht. UND die bootdisk samt
+    Installation funktioniert wenigstens ordentlich.<br>
+    <br>
+    Einige Vorarbeiten muss man dennoch durchführen: <br>
+    1. Idealerweise wurde bei der Mac OS Installation die Festplatte in mehreren
+    Partitionen geteilt und mittels einer linuxppc-<a href="http://www.finnix.org">live-CD</a>
+    eine sog. bootstrap-Partition (800k) für den bootloader vorbereitet. <br>
+    2. Das im iMac eingebaute CD-Laufwerk ist sehr eigen (und alt) und nimmt
+    nicht jede CD und fremde Bootdisks schon mal gar nicht. Entweder man hat den
+    iMac vom Upgrade (s.o.) noch offen und kann mittels IDE-Kabel einen CD
+    Laufwerk anschliessen; ODER man kauft und verwendet gleich einen
+    USB-CD-Laufwerk. <br>
+    <br>
+    Mittels der Zaubertastenfolge cmd-opt-o-f gelangt man in die OpenFirmware
+    und kann dort den USB-Port ansprechen und von CD starten. Mit &lt;dev /
+    ls&gt; findet man schnell die USB-Schnittstelle, die etwas kryptisch
+    daherkommt. In etwa mit &lt;boot usb1/disk@1:2,\\yaboot&gt; sollte es
+    klappen. Am anderen Port ist im Normallfall die USB-Tastatur angeschlossen.<br>
+    Wichtig ist die Verwendung von video=ofonly als Zusatz in der Kommandozeile,
+    da es sonst zu Probleme beim Bildaufbau kommt (man sieht nichts). Danach
+    folgt die übliche debian-Installation. Der Bootloader wird seine
+    Installation fertigstellen und es folgt der Neustart. Bevor das System den
+    Xserver startet, muss man diesen abwürgen, da keine ordentliche xorg.conf
+    existiert. Diese kopiert man z.B. von <a href="http://mac.linux.be/content/xorgconf-files">mac
+      linux</a> in den richtigen Pfad, irgendwo unter ../etc/X/. <br>
+    <br>
+    Die Bootauswahl ist zeilenorientiert und sagt eigentlich alles aus: <br>
+    l=linux<br>
+    x=Mac OS X<br>
+    o=OpenFirmware<br>
+    c=CD<br>
+    <br>
+    Was dann folgt ist Feintuning, wie zusätzliche Module/Firmware
+    (orinoco), powerprefs, pbbuttonsd, gkrellm-pmud und ggf. LXDE. Die
+    Airportkarte sollte fürs wlan manuell eingebunden werden (siehe mein blog).<br>
+    <br>
+    Das ganze Prozedere funktioniert übrigens nahezu 1:1 auf einem ibook G3 (<a
+
+      href="#ibook_g3">s.o.</a>)...
+  </body>
+</html>
