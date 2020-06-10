@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="keywords" content="linux,IBM L40SX, PS/2">
+   <meta name="generator" content="Bluefish 2.2.5" >
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+      <div class="nav">
+      <ul>
+        <li class="linux"><a href="linuxe.htm">Linux</a></li>
+        <li class="ibml40"><a href="ibml40sxe.htm" class="active">IBM L40sx</a></li>
+        <li class="router"><a href="routere.htm">Firewall Router</a></li>
+        <li class="mca"><a href="hardwaree.htm">MCA hardware</a></li>
+        <li class="ppc"><a href="../docs/ppc.htm">linux PPC</a></li>
+        <li class="down"><a href="hardwaree.htm">Downloads</a></li>
+      </ul>
+    </div>
+<h1>
+<br>
+IBM L40SX</h1>
+
+<p><br>Well, here it is: Linux on the <a href="../docs/l40sx.htm">L40SX</a>
+with 2 MB !
+<br>
+<table>
+<tr>
+<td>
+<table BORDER=2 CELLPADDING=3 BGCOLOR="#99FF99" FRAME="box" >
+<tr>
+<th>Description</th>
+<th>Content</th>
+</tr>
+<tr>
+<td>Processor (MHz)</td>
+<td>386SX 20-Mhz</td>
+</tr>
+<tr>
+<td>Bus architecture</td>
+
+<td>AT Bus</td>
+</tr>
+<tr>
+<td>RAM (standard)</td>
+<td>2MB</td>
+</tr>
+<tr>
+<td>RAM (maximum)</td>
+
+<td>18MB</td>
+</tr>
+
+<tr>
+<td>Video</td>
+
+<td>LCD-VGA 256</td>
+</tr>
+
+<tr>
+<td>Floppydisk</td>
+
+<td>3.5-inch</td>
+</tr>
+
+<tr>
+<td>Fixed disk IDE</td>
+
+<td>80MB</td>
+</tr>
+</table>
+</td>
+
+<td><img SRC="../images/l40sx.jpg" ALT="L40sx" NOSAVE height=320 width=242></td>
+</tr>
+</table>
+
+<br>
+<p>This page results on a request concerning Linux on the L40SX.</p>
+<p>First, you need the reference disks from <a href="http://www.pc.ibm.com/support">IBM</a>-support
+site; now install a minimum DOS. With the newer version of <b>fips</b>
+it won't be a problem; for <a href="http://web.archive.org/web/20040215092119/http://www.fokus.gmd.de/linux/linux-distrib-small.html">mini-Linux
+distributions</a> you may need a minimum of 20MB diskspace, better 40MB
++ swapspace. Maybe you wan't to upgrade your harddisk with a standard 2,5"
+(take care of 512 limit).</p>
+<p>With the standard 2MB RAM it becomes very laborious; but hey, you can
+<b>modify</b> a standard 4MB-PARITY-module (1MBx36) and plug it into your
+L40SX. See how to do this at <a href="http://members.aol.com/mcapage0/memory01.htm">MCA-Enthusiasts
+Page</a>. Thanks to Peter H. Wendt, it works :-))!</p>
+<p>Well, you don't want to do that ? So you may try&nbsp; <a href="http://web.archive.org/web/20121101051622/http://www.superant.com/smalllinux/">Small
+Linux</a>&nbsp; version 0.7 with the kernel from <a href="http://www.debian.org">Debian</a>
+1.3.1, taken from the special <a href="http://archive.debian.org/debian-archive/dists/Debian-1.3.1/main/disks-i386/1997-10-13/special/tecra">bootdisks</a>
+for Thinkpads. Why ? The L40SX has problems with the "refreshing of A20
+gate" (don't ask me why) like some ThinkPads and a standard kernel won't
+boot.</p>
+<p>Write the install disks with <b>rawrite</b> or <b>dd</b> and read the
+info pages from the developer howto copy them to harddisk. Remember: you
+must change the kernel against the patched one from Debian! Don't forget
+to copy the support disk, too.</p>
+<p>If you have already tried another distribution and you can't reboot
+after first installation, you should load it with the mentioned special
+kernel. I use the base diskset from the <a href="http://www.debian.org">Debian
+libc5-distribution</a> version 1.3.1. Maybe you wan't to use your CD driver,
+then you create a <b>plip</b>-connection to your computer.</p>
+<p>Anyway, I use a modified memory-module to update my laptop.</p>
+<p>Get a 4MB PS/2-module with parity and check pin 67 to 70 with a multimeter.
+Pin 69 and 70 must be set to ground (pin 72), pin 67 and 68 must be open
+(no contact). Remove or add the Zero-ohm-resistors somewhere on the side
+with a soldering iron. That's it !</p>
+<p>You need to enlarge the hole on the module to fit into memory connector,
+or you simply cut the nose on the connector; check out the module. Last,
+you will get a 164-Error and now you need the reference-disk to change
+memory size.</p>
+<p>My modified module works fine in the second connector, don't ask me
+why. Two 4MB modules won't work and I have not hear about a successful
+modified 8MB module.</p>
+<p><b><i>All tips given and all the described modifications are 'On Own
+Risk'. The maintainer will give no warranty of any kind !</i></b></p>
+<p>I use a modified 8 chips Kingston module, it works; a original 3 chips
+IBM module don't work. Don't give up !</p>
+<br>
+<br>
+<br>
+<center>
+<p><img SRC="../images/mca.gif" ALT="MCA Linux" NOSAVE BORDER=0 height=100 width=200></a>
+<br><a href="http://members.aol.com/mcapage0/mcaindex.htm" target="top"><img SRC="../images/mca2.gif" ALT="PS/2" NOSAVE BORDER=0 height=60 width=287></a></center></p>
+
+</body>
+</html>
