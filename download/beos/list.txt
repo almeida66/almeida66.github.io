@@ -1,0 +1,13 @@
+Zum download bitte Dateiname zum Pfad manuell ergaenzen/
+To download please add filename to root directory:
+->../download/beos/<here>
+
+wireless_howto.zip
+maestro2.pkg
+apm-1.00b.zip
+MobilityDriverR5-1.0b6-x86.zip
+Genesis_Commander.zip
+BeOS5-PersonalEdition.exe.zip
+BeOS-5.0.3-PersonalEd-x86-Update.zip
+BeOS-5.0.1-PersonalEd-x86-Update.zip
+BatteryStatus.zip
