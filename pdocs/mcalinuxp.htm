@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de-de">
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="generator" content="Bluefish 2.2.5" >
+  <meta name="Description" content="MCA Linux, Debian, PS/2">
+  <meta name="KeyWords" content="MCA , Linux , Micro Channel, PS/2">
+  <title>mcalinux</title> 
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <div class="nav">
+      <ul>
+        <li class="linux"><a href="linux1.htm">Linux</a></li>
+        <li class="ibml40"><a href="ibml40sxp.htm">IBM L40sx</a></li>
+        <li class="router"><a href="routerp.htm">Firewall Router</a></li>
+        <li class="mca"><a href="mcalinuxp.htm" class="active">MCA hardware</a></li>
+        <li class="ppc"><a href="../docs/ppc.htm">linux PPC</a></li>
+        <li class="down"><a href="hardwarep.htm">Downloads</a></li>
+      </ul>
+    </div>
+    <br>
+<h1>MCA Linux</h1>
+<p><br>
+Micro Channel, abreviado MCA, &eacute; um barramento desenvolvido
+pela IBM, que em tempos de ISA era relativamente r&aacute;pido. Tais
+barramentos
+foram principalmente instalados em computadores industriais, mas
+tamb&eacute;m
+existem alguns <a href="../docs/tp700.htm">laptops</a> com tal
+barramento
+MCA.
+</p>
+<p>Estes computadores t&ecirc;m frequentemente ESDI, SCSI ou ambos os
+tipos
+de controladores na placa.
+</p>
+<p>Com sistemas operadores "normais" n&atilde;o haver&atilde;o grandes
+problemas com estas m&aacute;quinas, mas com linux isto n&atilde;o
+&eacute;
+t&atilde;o simples. Linux &eacute; um sistema "livre", que foi
+desenvolvido
+por Linus Torvalds com base numa estrutura similar &agrave; de Unix
+para
+computadores tipo x86. Entretanto h&aacute; ports para Alpha, SPARC,
+PowerPC
+etc. J&aacute; que os computadores com MCA n&atilde;o foram
+constru&iacute;dos
+para o usu&aacute;rio normal, a sustenta&ccedil;&atilde;o do linux
+estava
+ainda nos buracos de in&iacute;cio.
+</p>
+<p>O primeiro lugar de pesquisa &eacute; a p&aacute;gina <a
+ href="http://web.archive.org/web/20060314031125/http://www.dgmicro.com/mca/default.htm">MCA
+Linux</a> de <a href="mailto:dwright@dca.net">Chris Beaureguard</a>.
+Aqui
+encontram-se kernel patches, imagens etc. para v&aacute;rios modelos
+com
+MCA. Entretanto h&atilde;o algumas distribui&ccedil;&otilde;es como a
+<a href="http://www.debian.org">Debian</a>
+ou <a href="http://www.suse.de">Suse</a> com suporte MCA e ESDI.
+</p>
+<p>O primeiro contacto com MCA foi com um velho IBM tipo PS/2 76i, que
+estava equipado com um controlador SCSI da Future Domain. Nessa
+&eacute;poca
+pouco ou nada tinha ouvido de tal barramento Micro Channel. Tentei
+instalar
+a Debian 1.3.1, mas a m&aacute;quina n&atilde;o queria arrancar. Enfim,
+tempo para procurar na internet e a&iacute; cheguei &agrave;s
+p&aacute;ginas
+de <a href="http://www.mcamafia.de/">Peter Wendt</a>
+e da&iacute; para a site da MCA Linux.
+</p>
+<p>A instala&ccedil;&atilde;o funcionou ent&atilde;o com as imagens
+especiais
+da Debian 1.3.1 com a adi&ccedil;&atilde;o dos par&acirc;metros <b>fdomain=0x140,5,ibm</b>
+(IRQ e IO ver ajustamento do controlador SCSI) sem problema.
+</p>
+<p>Em Abril 2000 eu installei linux num <a href="../docs/tp700.htm">ThinkPad
+700</a> ; aqui v&atilde;o ter dificuldades com as disquettes e tais
+discos
+ESDI. Enfim, eu tamb&eacute;m s&oacute; tinha 4MB RAM, que n&atilde;o
+&eacute;
+favor&aacute;vel para uma instala&ccedil;&atilde;o normal.
+</p>
+<p>O problema principal &eacute; a uni&atilde;o de MCA e ESDI ! Embora
+MCA e ESDI sejam agora suportados na kernel de linux, quase sempre
+faltam
+nas disquetes de instala&ccedil;&atilde;o. Mesmo um&nbsp; <b>fdisk -l</b>&nbsp;
+n&atilde;o reconhece drives tipo ESDI e tamb&eacute;m <b>lilo</b>
+trabalha
+mal.
+</p>
+<p>Eu usei outra vez a Debian 1.3.1, porque esta
+distribui&ccedil;&atilde;o
+&eacute; baseada na libc5, que &eacute; um tanto mais pequena do que
+glibc.
+Mas as disquetes de boot tamb&eacute;m n&atilde;o trabalham
+correctamente.
+Encontram-se na site da&nbsp; <a href="http://www.dgmicro.com/mca">MCA
+Linux</a>&nbsp;
+algumas indica&ccedil;&otilde;es como proceder com a <a
+ href="../docs/debian.htm">instala&ccedil;&atilde;o
+Debian</a> , mas depois do primeiro reboot temos o erro "superblock not
+found", que com sorte se pode dar um jeito com ajuda de sistemas de <a
+ href="http://metalab.unc.edu/pub/Linux/system/recovery">disquetes
+rescue</a> e efsck.
+</p>
+<p>Afinal, encontrei um pouco escondido no server da MCA Linux esta
+<a href="../pdocs/hardwarep.htm">bootdisk</a>
+para Debian 1.2 que tamb&eacute;m trabalha com Debian 1.3.1.
+Al&eacute;m
+disso est&atilde;o l&aacute; alguns <a
+ href="../download/MCA-patches-0_1.tgz">patches</a>
+para fdisk e lilo.
+</p>
+<p>Leiam ao in&iacute;cio do trabalho a ajuda de F1 a F10, pois
+l&aacute;
+encontraram v&aacute;rios&nbsp; <a
+ href="http://metalab.unc.edu/pub/Linux/docs/HOWTO/BootPrompt-HOWTO">appends</a>
+para o kernel!
+</p>
+<p>Com 4MB de mem&oacute;ria a instala&ccedil;&atilde;o parte com o
+menue
+de <i>lowmem</i> e&nbsp; /dev/eda &eacute; detectado :)) .Caso tudo
+corra
+bem, n&atilde;o esque&ccedil;am de activar&nbsp; "<b>X - Installation
+with
+MCA and ESDI</b>". A parte dos m&oacute;dulos n&atilde;o funciona,
+aparentemente
+o ficheiro falta na disquete, mas n&atilde;o faz mal.
+</p>
+<p>Depois do primeiro reboot deve-se ter cautela pela mensagem do
+kernel
+<b>/dev/edb</b>
+. Caso s&oacute; tenha um disco r&iacute;gido, &eacute; de abrir outra
+janela e apagar tal entrada com&nbsp; <b>rm /dev/edb*</b>. O patch
+aparentemente
+n&atilde;o funcionou por todo. A seguir &eacute; de compilar o kernel e
+instalar os m&oacute;dulos de novo.
+</p>
+<p>Estes problemas (bug: # 62623) das disquetes de
+instala&ccedil;&atilde;o
+com MCA e ESDI s&atilde;o conhecidos na Debian e salvo erro j&aacute;
+foram
+fixados na vers&atilde;o "potato". Da&iacute; que tamb&eacute;m se
+podem
+instalar as novas bibliotecas glibc.
+</p>
+<p>Com mais de 4MB de mem&oacute;ria &eacute; poss&iacute;vel instalar
+X-windows; d&ecirc;em uma tentativa ao <a
+ href="http://web.archive.org/web/20121101051622/http://www.superant.com/smalllinux">mini-X</a>
+ou ao <a
+ href="http://metalab.unc.edu/pub/micro/pc-stuff/Linux/apps/MGR/%21INDEX.html">MGR</a>.
+Infelizmente ainda n&atilde;o consegui por o MGR a funcionar :( .
+</p>
+<p>Aqui o&nbsp; <a href="../docs/tp700.htm">TP 700</a>&nbsp;
+tamb&eacute;m
+n&atilde;o lhe vai fazer a vida demasiada f&aacute;cil. O display LCD
+trabalha
+com "dualscan" e porque motivo seja o ficheiro <b>xf86config</b>
+n&atilde;o
+encontra defini&ccedil;&atilde;o que trabalhe. Em primeiro este modelo
+usa videochips tipo <a href="../download/x-notebook.txt">WD90C2x</a> ,
+segue-se que o VRAM n&atilde;o &eacute; detectado em ao fim ainda temos
+uma imagem dupla.
+</p>
+<p>Necessitam do <a href="../download/tpdualscan_elf.gz">tp_dualscan</a>
+de <i><a
+ href="http://http://www.semper.org/sirene/people/sti/index.html/">M.
+Steiner</a></i> para
+dar volta ao TP, e enfim no meu trabalha um WD90C26, que opera na <a
+ href="../download/xf86config.txt">XF86Config</a>
+como um WD90C30, com uma defini&ccedil;&atilde;o de 640x480 em 100Hz.
+Ao
+terminar o Xserver l&aacute; t&ecirc;em a dupla imagem.
+</p>
+<p>N&atilde;o &eacute; bonito, mas funciona...
+<br>
+<br>
+<br>
+</p>
+<center>
+<p><img src="../images/mca.gif" alt="MCA Linux" nosave="" border="0"
+ height="100" width="150"></p>
+</center>
+</body>
+</html>
