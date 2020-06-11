@@ -5,7 +5,7 @@
    <meta name="keywords" content="Portugal, linux, firewall, router, freesco">
    <meta name="generator" content="Bluefish 2.2.5" >
    <title>router</title>
-   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
           <div class="nav">
@@ -20,132 +20,76 @@
     </div>
     <br>
 <h3>
-Seguran&ccedil;a no internet - <font size=+0>ou como instalar um&nbsp;
-firewall router</font></h3>
+Seguran&ccedil;a no internet - <font size=+0>ou como instalar um&nbsp; firewall router</font></h3>
 
-<p><br>Pensem sobre isto: <b><i>Todos que entram na internet, s&atilde;o
-parte do World Wide Web!</i></b>
-<br>Assim tamb&eacute;m podem ser atacados. Deiam uma vista de olhos &agrave;s
-p&aacute;ginas de
-<a href="http://www.guninski.com">Georgi Guninski</a>
-. J&aacute; observaram pela internet o que t&ecirc;em no vosso disco r&iacute;gido
-?</p>
-<p>Bem, depende dos ajustes usados no browser e naturalmente das p&aacute;ginas
-que visitam. Mas hoje sem java n&atilde;o se ver&aacute; muito no monitor.
-Pela atribui&ccedil;&atilde;o de IP din&acirc;micos pelo provider o usu&aacute;rio
-j&aacute; est&aacute; um pouco seguro.</p>
-<p>O usu&aacute;rio normal (a qual eu me conto) tem um computador, alguma
-software e um modem. Todos que perseguem um pouco as not&iacute;cias, j&aacute;
-ouviram falar de ataques pela internet &agrave; yahoo, downloads monitorados
-pela Microsoft etc.</p>
-<p>N&atilde;o acham que &eacute; tempo de aquisi&ccedil;&atilde;o de uma
-solu&ccedil;&atilde;o tipo firewall ? O que &eacute; isso ? Uma firewall
-&eacute; uma protec&ccedil;&atilde;o a penetra&ccedil;&otilde;es desautorizadas,
-por exemplo numa rede local. H&aacute; v&aacute;rias possibilidades de
+<p><br>Pensem sobre isto: <b><i>Todos que entram na internet, s&atilde;o parte do World Wide Web!</i></b>
+<br>Assim tamb&eacute;m podem ser atacados. Deiam uma vista de olhos &agrave;s p&aacute;ginas de <a href="http://www.guninski.com">Georgi Guninski</a>
+. J&aacute; observaram pela internet o que t&ecirc;em no vosso disco r&iacute;gido?
+</p>
+<p>Bem, depende dos ajustes usados no browser e naturalmente das p&aacute;ginas que visitam. Mas hoje sem java n&atilde;o se ver&aacute; muito no monitor.
+Pela atribui&ccedil;&atilde;o de IP din&acirc;micos pelo provider o usu&aacute;rio j&aacute; est&aacute; um pouco seguro.</p>
+<p>O usu&aacute;rio normal (a qual eu me conto) tem um computador, alguma software e um modem. Todos que perseguem um pouco as not&iacute;cias, j&aacute;
+ouviram falar de ataques pela internet &agrave; yahoo, downloads monitorados pela Microsoft etc.</p>
+<p>N&atilde;o acham que &eacute; tempo de aquisi&ccedil;&atilde;o de uma solu&ccedil;&atilde;o tipo firewall ? O que &eacute; isso ? Uma firewall
+&eacute; uma protec&ccedil;&atilde;o a penetra&ccedil;&otilde;es desautorizadas, por exemplo numa rede local. H&aacute; v&aacute;rias possibilidades de
 realizar tais firewalls, de router at&eacute; proxy.</p>
-<p>O que &eacute; que necessitam ? Neste exemplo: 2 placas de rede, 1 cabo
-"crossover" e um segundo computador (a partir de 486 com 8MB de mem&oacute;ria).
-Custa &agrave; volta de 70,-DM mais o computador velho que est&aacute;
-em qualquer canto da cave :) .</p>
-<p>J&aacute; que n&atilde;o sou programador, procurei por solu&ccedil;&otilde;es
-livres e encontrei esta lista:
+<p>O que &eacute; que necessitam ? Neste exemplo: 2 placas de rede, 1 cabo "crossover" e um segundo computador (a partir de 486 com 8MB de mem&oacute;ria).
+Custa &agrave; volta de 70,-DM mais o computador velho que est&aacute; em qualquer canto da cave :) .</p>
+<p>J&aacute; que n&atilde;o sou programador, procurei por solu&ccedil;&otilde;es livres e encontrei esta lista:
 <br></p>
 <ul>
-<li>
-<a href="http://www.freesco.org">FREESCO</a></li>
-
-<li>
-<a href="http://www.coyotelinux.com">Coyote</a></li>
-
-<li>
-<a href="http://www.zelow.no/floppyfw/">floppyfw</a></li>
-
-<li>
-<a href="http://web.archive.org/web/20020207120108/http://mpsdr.unx.nu/MINI/">Dialup router-MINI</a></li>
-
-<li>
-<a href="http://web.archive.org/web/20101210013003/http://lightning.prohosting.com/~normr/">normr firewall/router</a></li>
-
-<li>
-<a href="http://web.archive.org/web/20010308181721/http://edge.fireplug.net/">edge-fireplug</a></li>
-
-<li>
-etc.</li>
+<li><a href="http://www.freesco.org">FREESCO</a></li>
+<li><a href="http://www.coyotelinux.com">Coyote</a></li>
+<li><a href="http://www.zelow.no/floppyfw/">floppyfw</a></li>
+<li><a href="http://web.archive.org/web/20020207120108/http://mpsdr.unx.nu/MINI/">Dialup router-MINI</a></li>
+<li><a href="http://web.archive.org/web/20101210013003/http://lightning.prohosting.com/~normr/">normr firewall/router</a></li>
+<li><a href="http://web.archive.org/web/20010308181721/http://edge.fireplug.net/">edge-fireplug</a></li>
+   <a>e altamente actuais:</a>
+<li><a href="http://www.pfsesne.org">pfsense</a></li>
+  <li><a href="http://www.opnsense.org">OPNsense</a></li>
 </ul>
 
-<p><br>Os programas acima mencionados baseam naturalmente :) em linux e
-acabam por caber numa s&oacute; disquete e at&eacute; trabalham sem disco
-r&iacute;gido. Quem quer absolutamente software baseada em Miscrosoft,
-deve tentar o <a href="http://www.janaserver.de">Jana-Server</a>.
-J&aacute; agora comparem com a software
-<a href="http://www.gnatbox.com">GNATbox</a>.</p>
-<p>Quem tem outro computador &agrave; m&atilde;o pode naturalmente usar
-uma distribui&ccedil;&atilde;o completa de linux para realizar uma protec&ccedil;&atilde;o
-semelhante com ajuda de <a href="http://www.samba.org">samba</a>, ipfwadm
-e tcpd. Bem, eu uso&nbsp; <a href="http://www.freesco.org">FREESCO</a>
+<p><br>Os programas acima mencionados baseam naturalmente :) em linux e acabam por caber numa s&oacute; disquete e at&eacute; trabalham sem disco
+r&iacute;gido. Quem quer absolutamente software baseada em Miscrosoft, deve tentar o <a href="http://www.janaserver.de">Jana-Server</a>.
+J&aacute; agora comparem com a software <a href="http://www.gnatbox.com">GNATbox</a>.</p>
+<p>Quem tem outro computador &agrave; m&atilde;o pode naturalmente usar uma distribui&ccedil;&atilde;o completa de linux para realizar uma protec&ccedil;&atilde;o
+semelhante com ajuda de <a href="http://www.samba.org">samba</a>, ipfwadm e tcpd. Bem, eu uso&nbsp; <a href="http://www.freesco.org">FREESCO</a>
 e estou mais que satisfeito.</p>
-<p>FREESCO tem a vantagem de caber numa &uacute;nica disquete e at&eacute;
-funcionar com um 386SX sem necessitar de um disco r&iacute;gido. Mas sempre
-&eacute; recomendado trabalhar com um 486 e 16MB de mem&oacute;ria; eu
-s&oacute; uso 8MB, mas criei swap no disco r&iacute;gido.</p>
+<p>FREESCO tem a vantagem de caber numa &uacute;nica disquete e at&eacute; funcionar com um 386SX sem necessitar de um disco r&iacute;gido. Mas sempre
+&eacute; recomendado trabalhar com um 486 e 16MB de mem&oacute;ria; eu s&oacute; uso 8MB, mas criei swap no disco r&iacute;gido.</p>
 <p>Como &eacute; que se instala tal software ?</p>
-<p>Copiar ficheiros image, driver e rawrite para um sistema operador DOS
-e criar uma disquete de instala&ccedil;&atilde;o. Introduzir e configurar
-as placas de rede; no segundo computador basta ter DOS e um modem. Depois
-de introduzir a disquete e arrancar, come&ccedil;a pela identifica&ccedil;&atilde;o
+<p>Copiar ficheiros image, driver e rawrite para um sistema operador DOS e criar uma disquete de instala&ccedil;&atilde;o. Introduzir e configurar
+as placas de rede; no segundo computador basta ter DOS e um modem. Depois de introduzir a disquete e arrancar, come&ccedil;a pela identifica&ccedil;&atilde;o
 inicial root/root e entra <b>setup</b>.</p>
-<p>As placas de rede que acordam com 3Com ou Ne2000 s&atilde;o logo detectadas,
-sen&atilde;o tem de se usar o ficheiro driver. Nas placas de rede modernas
-os ajustes IRQ s&atilde;o deteminados pela software; neste caso &eacute;
-recomendado dar um endere&ccedil;o fixo, como por exemplo io=0x280, irq=5.</p>
-<p>Para usar FREESCO num disco r&iacute;gido basta entrar <b>move2hdd </b>e
-a software sera instalada num sistema umsdos, que arranca com execu&ccedil;&atilde;o
-de <b>router.bat</b>. Aten&ccedil;&atilde;o, n&atilde;o editar nenhum ficheiro
-durante uma sess&atilde;o DOS!</p>
-<p>A configura&ccedil;&atilde;o &eacute; f&aacute;cil e est&aacute; descrita
-na <a href="http://www.freesco.org">documenta&ccedil;&atilde;o</a>
-dos autores. A documenta&ccedil;&atilde;o ainda n&atilde;o est&aacute;
-completa, pois a software ainda se encontra no estado <i>beta</i>, mas
+<p>As placas de rede que acordam com 3Com ou Ne2000 s&atilde;o logo detectadas, sen&atilde;o tem de se usar o ficheiro driver. Nas placas de rede modernas
+os ajustes IRQ s&atilde;o deteminados pela software; neste caso &eacute; recomendado dar um endere&ccedil;o fixo, como por exemplo io=0x280, irq=5.</p>
+<p>Para usar FREESCO num disco r&iacute;gido basta entrar <b>move2hdd </b>e a software sera instalada num sistema umsdos, que arranca com execu&ccedil;&atilde;o
+de <b>router.bat</b>. Aten&ccedil;&atilde;o, n&atilde;o editar nenhum ficheiro durante uma sess&atilde;o DOS!</p>
+<p>A configura&ccedil;&atilde;o &eacute; f&aacute;cil e est&aacute; descrita na <a href="http://www.freesco.org">documenta&ccedil;&atilde;o</a>
+dos autores. A documenta&ccedil;&atilde;o ainda n&atilde;o est&aacute; completa, pois a software ainda se encontra no estado <i>beta</i>, mas
 funciona para a maioria do pessoal.</p>
-<p>A dificuldade principal &eacute; a configura&ccedil;&atilde;o dos clients
-(aqui Win9x); tamb&eacute;m esbarrei aqui pela primeira vez... S&oacute;
-<br>necessitam de instalar o TCP/IP! A placa foi com certeza correctamente
-detectada e a rede necessita os seguintes
-<br>ajustes: endere&ccedil;o IP (192.168.xxx.xxx), gateway e DNS levam
-o endere&ccedil;o IP do <u>router</u> (192.168.xxx.yyy), a domain
-<br>de acordo com o ajuste <i>default </i>&eacute;<i>&nbsp;</i> <i>inet</i>
-e como hostname por exemplo&nbsp; <i>router.inet</i>. O client tamb&eacute;m
+<p>A dificuldade principal &eacute; a configura&ccedil;&atilde;o dos clients (aqui Win9x); tamb&eacute;m esbarrei aqui pela primeira vez... S&oacute;
+<br>necessitam de instalar o TCP/IP! A placa foi com certeza correctamente detectada e a rede necessita os seguintes
+<br>ajustes: endere&ccedil;o IP (192.168.xxx.xxx), gateway e DNS levam o endere&ccedil;o IP do <u>router</u> (192.168.xxx.yyy), a domain
+<br>de acordo com o ajuste <i>default </i>&eacute;<i>&nbsp;</i> <i>inet</i> e como hostname por exemplo&nbsp; <i>router.inet</i>. O client tamb&eacute;m
 tem um nome, entrada algures sob network/identification.</p>
-<p>E pronto! Arrancar de novo e fazer um teste com&nbsp; <b>ping</b> 192.168.xxx.yyy
-no client. No browser &eacute; de escrever o endere&ccedil;o do router,
-port 82 (192.168.xxx.yyy:82). Voil&aacute;, o <a href="http://www.acme.com">httpd</a>&nbsp;
-j&aacute; l&aacute; deve estar &agrave; espera. Sim, esta software tamb&eacute;m
-oferece uma administra&ccedil;&atilde;o por webclient. Querem examinar
-o layout da vossa homepage sob circunst&acirc;ncias "reais" ? Ent&atilde;o
-activem o httpd sob <b>setup/advanced</b> para externos e coloquem&nbsp;
-os ficheiros sob /mnt/www .</p>
-<p>A software oferece o seguinte: servi&ccedil;os DNS, DHCP, TIME, telnet,
-web, print e RAS (acesso remoto).</p>
-<p>Para quem usa&nbsp; a instala&ccedil;&atilde;o no disco r&iacute;gido
-pode integrar <a href="http://www.Hughes.com.au">mSQL</a> ou <a href="http://www.gnome.org/mc">MidnightCommander</a>
-; apenas se tem de usar packages baseadas em libc5 e colocar as binaries
-sob&nbsp; /mnt/router/rc e talvez ajustar o ficheiro <i>rc_user</i>. O
-sistema opera completamente em RAM, da&iacute; que o diret&oacute;rio raiz
-/&nbsp; &eacute; virtual e todas as modifica&ccedil;&otilde;es se perdem
+<p>E pronto! Arrancar de novo e fazer um teste com&nbsp; <b>ping</b> 192.168.xxx.yyy no client. No browser &eacute; de escrever o endere&ccedil;o do router,
+port 82 (192.168.xxx.yyy:82). Voil&aacute;, o <a href="http://www.acme.com">httpd</a>&nbsp; j&aacute; l&aacute; deve estar &agrave; espera. Sim, esta software tamb&eacute;m
+oferece uma administra&ccedil;&atilde;o por webclient. Querem examinar o layout da vossa homepage sob circunst&acirc;ncias "reais" ? Ent&atilde;o
+activem o httpd sob <b>setup/advanced</b> para externos e coloquem&nbsp; os ficheiros sob /mnt/www .</p>
+<p>A software oferece o seguinte: servi&ccedil;os DNS, DHCP, TIME, telnet, web, print e RAS (acesso remoto).</p>
+<p>Para quem usa&nbsp; a instala&ccedil;&atilde;o no disco r&iacute;gido pode integrar <a href="http://www.Hughes.com.au">mSQL</a> ou <a href="http://www.gnome.org/mc">MidnightCommander</a>
+; apenas se tem de usar packages baseadas em libc5 e colocar as binaries sob&nbsp; /mnt/router/rc e talvez ajustar o ficheiro <i>rc_user</i>. O
+sistema opera completamente em RAM, da&iacute; que o diret&oacute;rio raiz /&nbsp; &eacute; virtual e todas as modifica&ccedil;&otilde;es se perdem
 no pr&oacute;ximo arranque.</p>
 <p>Agora &eacute; ainda poss&iacute;vel verificar a rede com&nbsp; <a href="ftp://ftp.porcupine.org/pub/security/index.html">satan</a>,
-<a href="http://www.wwdsi.com/saint">saint</a>
-ou <a href="http://www.nessus.org">nessus</a> .&nbsp; E n&atilde;o se esque&ccedil;am
+<a href="http://www.wwdsi.com/saint">saint</a> ou <a href="http://www.nessus.org">nessus</a> .&nbsp; E n&atilde;o se esque&ccedil;am
 de mudar todas as senhas com <b>passwd</b>.</p>
-<p>E assim se passou uma tarde de domingo, para a pr&oacute;xima vez dar
-um surf na WWW um pouco mais seguro.</p>
+<p>E assim se passou uma tarde de domingo, para a pr&oacute;xima vez dar um surf na WWW um pouco mais seguro.</p>
 <br>
+   <p>DOS e modem, o que é isso? Hoje uso pfsense e um thinclient da Alix como firewall.
 <br>
+
 <br>
-<br>
-<br>
-<br>
-<center>
-<p><a href="http://www.freesco.org"><img SRC="../images/freesco.gif" ALT="freesco" NOSAVE BORDER=0 height=60 width=468></a></center>
-</p></body>
+</body>
 </html>
