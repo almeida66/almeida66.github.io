@@ -6,7 +6,7 @@
     <meta name="Description" content="MCA Linux, Debian, PS/2">
     <meta name="KeyWords" content="MCA , Linux , Micro Channel, PS/2">
     <title>mcalinux</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
   </head>
   <body>
         <div class="nav">
@@ -22,155 +22,81 @@
     <h1>
       MCA Linux</h1>
     <p>
-      Micro Channel, kurz MCA genannt, ist eine von IBM entwickelte
-      Schnittstelle,
-      die zur Zeit des ISA-Buses relativ schnell war und hauptsächlich
-      in
-      Industrierechner Verwendung fand. IBM hat diese Schnittstelle aber auch
-      in einigen <a href="tp700.htm">Laptops</a> implementiert.
+      Micro Channel, kurz MCA genannt, ist eine von IBM entwickelte Schnittstelle, die zur Zeit des ISA-Buses relativ schnell war und hauptsÃ¤chlich
+      in Industrierechner Verwendung fand. IBM hat diese Schnittstelle aber auch in einigen <a href="tp700.htm">Laptops</a> implementiert.
     </p>
-    <p>Diese Rechner haben oft ESDI, SCSI oder beide Controllerarten an
-      Bord.
+    <p>Diese Rechner haben oft ESDI, SCSI oder beide Controllerarten an Bord.
     </p>
-    <p>Mit "normalen" Betriebssystemen wird man wenig Probleme mit diesen
-      Rechnern
-      bekommen, aber mit Linux ist das nicht so einfach !&nbsp; Linux ist ja
-      ein "freies" Betriebssystem, das von Linus Torvalds auf Basis einer
-      Unix
-      ähnlichen Struktur für x86-Maschinen entwickelt wurde.
-      Mittlerweile
-      gibt es aber auch Distributionen für Alpha, SPARC, PowerPC und wie
-      sie alle heißen. Da auch MCA-Rechner nicht gerade für den
-      normalen
-      Endanwender gedacht waren, steckte hier die Linux-Unterstützung
-      noch
-      in den Startlöchern.
+    <p>Mit "normalen" Betriebssystemen wird man wenig Probleme mit diesen Rechnern bekommen, aber mit Linux ist das nicht so einfach !&nbsp; Linux ist ja
+      ein "freies" Betriebssystem, das von Linus Torvalds auf Basis einer Unix aehnlichen Struktur fÃ¼r x86-Maschinen entwickelt wurde.
+      Mittlerweile gibt es aber auch Distributionen fÃ¼r Alpha, SPARC, PowerPC und wie sie alle heissen. Da auch MCA-Rechner nicht gerade fÃ¼r den
+      normalen Endanwender gedacht waren, steckte hier die Linux-Unterstuetzung noch in den Startloechern.
     </p>
     <p>Die erste Anlaufstelle ist die <a href="http://web.archive.org/web/20060314031125/http://www.dgmicro.com/mca/default.htm">MCA
-Linux
-        Seite</a> von <a href="mailto:dwright@dca.net">Chris Beaureguard</a>.
-      Hier erhält man Kernel-Patches, Boot-Images usw. für alle
-      möglichen
-      MCA Modelle. Mittlerweile bieten aber einige Distributionen wie <a href="http://www.debian.org">Debian</a>
-      oder <a href="http://www.suse.de">Suse</a> die notwendige MCA und ESDI
-      Unterstützung an.
+Linux Seite</a> von <a href="mailto:dwright@dca.net">Chris Beaureguard</a>.
+      Hier erhÃ¤lt man Kernel-Patches, Boot-Images usw. fÃ¼r alle moeglichen MCA Modelle. Mittlerweile bieten aber einige Distributionen wie <a href="http://www.debian.org">Debian</a>
+      oder <a href="http://www.suse.de">Suse</a> die notwendige MCA und ESDI Unterstuetzung an.
       <br>
       &nbsp;
     </p>
-    <p>Den ersten Kontakt mit MCA hatte ich mit einem alten IBM 76i, der
-      mit
-      einer SCSI-Karte von Future Domain ausgestattet war. Zu dem Zeitpunkt
-      hatte
-      ich kaum was von Micro Channel gehört. Nach anfänglichen
-      Versuchen
-      mit Debian 1.3.1 kam ich übers booten nicht hinweg und nichts
+    <p>Den ersten Kontakt mit MCA hatte ich mit einem alten IBM 76i, der mit einer SCSI-Karte von Future Domain ausgestattet war. Zu dem Zeitpunkt
+      hatte ich kaum was von Micro Channel gehoert. Nach anfaenglichen Versuchen mit Debian 1.3.1 kam ich Ã¼bers booten nicht hinweg und nichts
       lief.
-      Also ab ins Internet und suchen, suchen ... Da bin ich auf <a href="http://www.mcamafia.de/">Peter
-        Wendt's</a> Seiten gestossen und von da auf die MCA Linux Seite.
+      Also ab ins Internet und suchen, suchen ... Da bin ich auf <a href="http://www.mcamafia.de/">Peter Wendt's</a> Seiten gestossen und von da auf die MCA Linux Seite.
     </p>
-    <p>Die Installation verlief dann mit den speziellen boot-Images von
-      Debian
-      1.3.1 und der Übergabe des Parameters <b>fdomain=0x140,5,ibm</b>
-      (IRQ
-      und IO hängt von der jew. Einstellung des SCSI-Controllers ab)
-      problemlos.
+    <p>Die Installation verlief dann mit den speziellen boot-Images von Debian 1.3.1 und der Ãœbergabe des Parameters <b>fdomain=0x140,5,ibm</b>
+      (IRQ und IO hÃ¤ngt von der jew. Einstellung des SCSI-Controllers ab) problemlos.
       <br>
       &nbsp;
     </p>
-    <p>Im April 2000 habe ich Linux auf einem <a href="tp700.htm">ThinkPad
-        700</a>&nbsp;
-      installiert; hier gibt es zum Teil Probleme mit dem Floppylaufwerk und
-      besagten ESDI-device. Ausserdem hatte ich nur 4MB RAM, was für
-      einer
-      normalen Installation nicht gerade vorteilhaft ist.
+    <p>Im April 2000 habe ich Linux auf einem <a href="tp700.htm">ThinkPad 700</a>&nbsp; installiert; hier gibt es zum Teil Probleme mit dem Floppylaufwerk und
+      besagten ESDI-device. Ausserdem hatte ich nur 4MB RAM, was fuer einer normalen Installation nicht gerade vorteilhaft ist.
     </p>
-    <p>Hauptproblem ist und bleibt die unschöne Zusammenstellung MCA
-      und
-      ESDI ! Obwohl im Kernel mittlerweile MCA und ESDI unterstützt
-      werden,
-      so fehlt diese dennoch in den Installationsdisketten. Ja sogar ein <b>fdisk
-        -l</b> kann mit ESDI nichts anfangen; auch <b>lilo</b> arbeitet hier
-      falsch.
+    <p>Hauptproblem ist und bleibt die unschÃ¶ne Zusammenstellung MCA und ESDI ! Obwohl im Kernel mittlerweile MCA und ESDI unterstÃ¼tzt werden, so fehlt diese dennoch in den Installationsdisketten. 
+      Ja sogar ein <b>fdisk -l</b> kann mit ESDI nichts anfangen; auch <b>lilo</b> arbeitet hier falsch.
     </p>
-    <p>Ich verwende mal wieder die Debian 1.3.1, da diese Distribution noch
-      auf der schlanken libc5 basiert. Aber die mitgelieferten
-      Boot-/Rescuedisketten
-      funktionieren nicht. Auf der <a href="http://www.dgmicro.com/mca">MCA
-        Linux</a>
+    <p>Ich verwende mal wieder die Debian 1.3.1, da diese Distribution noch auf der schlanken libc5 basiert. Aber die mitgelieferten
+      Boot-/Rescuedisketten funktionieren nicht. Auf der <a href="http://www.dgmicro.com/mca">MCA Linux</a>
       page findet man einige wenige Anweisungen wie man die <a href="debian.htm">Debian-Installation</a>
-      doch zum laufen bringt, aber bei mir war nach dem ersten Neustart
-      erstmal
-      Schluß. Der superblock war nicht lesbar! Normalerweise kein
-      Beinbruch
-      (efsck -b 8193 /dev/ed*), aber die Debian-Installationsskripte waren ja
-      noch nicht durchlaufen. Ohne "neuen Root-Passwort" läuft da gar
-      nichts,
-      und das System war read-only ... :(
+      doch zum laufen bringt, aber bei mir war nach dem ersten Neustart erstmal Schluss. Der superblock war nicht lesbar! Normalerweise kein
+      Beinbruch (efsck -b 8193 /dev/ed*), aber die Debian-Installationsskripte waren ja noch nicht durchlaufen. Ohne "neuen Root-Passwort" lÃ¤uft da gar
+      nichts, und das System war read-only ... :(
     </p>
-    <p>Und mit 4MB RAM laufen die meisten <a href="http://metalab.unc.edu/pub/Linux/system/recovery">Rettungsdisketten</a>
-      nicht.
+    <p>Und mit 4MB RAM laufen die meisten <a href="http://metalab.unc.edu/pub/Linux/system/recovery">Rettungsdisketten</a> nicht.
     </p>
     <p>Abhilfe schafften die versteckten&nbsp; <a href="../docs/hardware.htm">Installationsdisketten</a>
-      für Debian 1.2 auf den MCA Linux-Server, die aber auch mit Debian
-      1.3.1 funktionieren (aber nicht mit neueren Versionen ab 2.x.x). Dort
-      befinden
-      sich auch <a href="../download/MCA-patches-0_1.tgz">Patches</a>
-      für fdisk und lilo.
+      fÃ¼r Debian 1.2 auf den MCA Linux-Server, die aber auch mit Debian 1.3.1 funktionieren (aber nicht mit neueren Versionen ab 2.x.x). Dort
+      befinden sich auch <a href="../download/MCA-patches-0_1.tgz">Patches</a> fÃ¼r fdisk und lilo.
     </p>
-    <p>Man sollte beim Start die Hilfetexte unter F1 bis F10 gründlich
-      lesen; dort stehen mehrere <a href="http://metalab.unc.edu/pub/Linux/docs/HOWTO/BootPrompt-HOWTO">appends</a>
-      für den boot-Prompt!
+    <p>Man sollte beim Start die Hilfetexte unter F1 bis F10 gruendlich lesen; dort stehen mehrere <a href="http://metalab.unc.edu/pub/Linux/docs/HOWTO/BootPrompt-HOWTO">appends</a>
+      fÃ¼r den boot-Prompt!
     </p>
-    <p>Die lowmem-Installation startet sofort mit dem bekannten Menue
-      und&nbsp;
-      /dev/eda wird erkannt :)) . Wenn dann alles losgeht, sollte man den
-      Unterpunkt
-      "<b>X - Installation with MCA and ESDI</b>" nicht vergessen. Die
-      Konfiguration
-      der Module läuft zwar nicht, da der Script auf der Diskette fehlt,
+    <p>Die lowmem-Installation startet sofort mit dem bekannten Menue und&nbsp; /dev/eda wird erkannt :)) . Wenn dann alles losgeht, sollte man den
+      Unterpunkt "<b>X - Installation with MCA and ESDI</b>" nicht vergessen. Die Konfiguration der Module laeuft zwar nicht, da der Script auf der Diskette fehlt,
       aber das ist nicht weiter schlimm.
     </p>
-    <p>Beim ersten Neustart sollte man die Kernelmeldungen beachten, da
-      kommt
-      irgendwann&nbsp; <b>/dev/edb</b> vor. Sollte man nur eine Festplatte
-      haben,
-      dann muß der Eintrag in einer zweiten Shell mit&nbsp; <b>rm
-        /dev/edb*</b>
-      gelöscht werden. Scheinbar ist hier der Patch nicht ganz
-      sauber...Danach
-      habe ich sowieso den Kernel 2.2.1 für meine Bedürfnisse neu
-      kompiliert
-      und installiert und läuft.
+    <p>Beim ersten Neustart sollte man die Kernelmeldungen beachten, da kommt irgendwann&nbsp; <b>/dev/edb</b> vor. Sollte man nur eine Festplatte
+      haben, dann muÃŸ der Eintrag in einer zweiten Shell mit&nbsp; <b>rm /dev/edb*</b> geloescht werden. Scheinbar ist hier der Patch nicht ganz
+      sauber...Danach habe ich sowieso den Kernel 2.2.1 fÃ¼r meine BedÃ¼rfnisse neu kompiliert
+      und installiert und lÃ¤uft.
     </p>
-    <p>Mittlerweile sollen die Probleme (Bug: #62623) der
-      Installationsdisketten
-      mit ESDI und fdisk in der Debian-"potato" behoben worden sein; d.h. man
-      könnte auch die aktuelle glibc verwenden.
+    <p>Mittlerweile sollen die Probleme (Bug: #62623) der Installationsdisketten mit ESDI und fdisk in der Debian-"potato" behoben worden sein; d.h. man
+      koennte auch die aktuelle glibc verwenden.
     </p>
-    <p>Mit RAM &gt; 4MB kann man X-windows installieren; hierzu gibt es
-      einige
+    <p>Mit RAM &gt; 4MB kann man X-windows installieren; hierzu gibt es einige
       <a href="http://web.archive.org/web/20121101051622/http://www.superant.com/smalllinux/">mini-X</a>
       oder das alte <a href="http://metalab.unc.edu/pub/micro/pc-stuff/Linux/apps/MGR/%21INDEX.html">MGR</a>.
       Letzteres habe ich leider noch nicht zum Laufen gebracht : (
     </p>
     <p>Auch hier ist der <a href="tp700.htm">TP 700</a> etwas eigenwillig:
-      die LCD Anzeige wird "zweifach" (dualscan) aufgebaut und aus welchen
-      Gründen
-      auch immer hat <b>xf86config</b>&nbsp; Probleme eine vernünftige
-      Auflösung
-      zu finden. Es geht damit los, daß i.a. Chips der Sorte <a href="../download/x-notebook.txt">WD90C2x</a>
-      eingesetzt werden, dann wird der Video-Speicher nicht richtig erkannt
-      und
-      danach erscheint das Bild doppelt.
+      die LCD Anzeige wird "zweifach" (dualscan) aufgebaut und aus welchen Gruenden auch immer hat <b>xf86config</b>&nbsp; Probleme eine vernuenftige
+      Aufloesung zu finden. Es geht damit los, daÃŸ i.a. Chips der Sorte <a href="../download/x-notebook.txt">WD90C2x</a>
+      eingesetzt werden, dann wird der Video-Speicher nicht richtig erkannt und danach erscheint das Bild doppelt.
     </p>
     <p>Um den Video-Speicher explizit freizugeben gibt es <a href="../download/tpdualscan_elf.gz">tp_dualscan</a>
-      von <i><a href="http://www.semper.org/sirene/people/sti/index.html">M.
-          Steiner</a></i>. Bei
+      von <i><a href="http://www.semper.org/sirene/people/sti/index.html">M. Steiner</a></i>. Bei
       meinem TP arbeitet ein WD90C26, der in der <a href="../download/xf86config.txt">XF86Config</a>
-      als WD90C30 mit einer Auflösung von 640x480 bei 100Hz arbeitet.
-      Kleiner
-      Schönheitsfehler ist das doppete Bild bei Rückkehr auf die
-      Konsole.
+      als WD90C30 mit einer AuflÃ¶sung von 640x480 bei 100Hz arbeitet. Kleiner Schoenheitsfehler ist das doppelte Bild bei Rueckkehr auf die Konsole.
     </p>
     <p>Aber man kann damit arbeiten ...
       <br>
