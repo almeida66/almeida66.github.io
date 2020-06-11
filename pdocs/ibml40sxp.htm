@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">  
   <meta name="keywords" content="linux,IBM L40SX, PS/2">
   <meta name="generator" content="Bluefish 2.2.5" >
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../assets/css/styles.css">
   <title>ibml40sxp</title>
 </head>
 <body>
@@ -29,23 +29,18 @@ com 2MB de mem&oacute;ria
     <tr>
       <td>
       <table bgcolor="#99ff99" border="2" cellpadding="3" frame="box">
-
         <tbody>
           <tr>
             <th>Descri&ccedil;&atilde;o</th>
             <th>Indice</th>
-
           </tr>
           <tr>
-
             <td>Processador (MHz)</td>
             <td>386SX 20-Mhz</td>
-
           </tr>
           <tr>
             <td>Arquitectura barramento</td>
             <td>AT Bus</td>
-
           </tr>
           <tr>
             <td>Mem&oacute;ria (standard)</td>
@@ -58,7 +53,6 @@ com 2MB de mem&oacute;ria
           <tr>
             <td>V&iacute;deo</td>
             <td>LCD-VGA 256</td>
-
           </tr>
           <tr>
             <td>Disquete drive</td>
@@ -78,69 +72,47 @@ com 2MB de mem&oacute;ria
 </p>
 <p>Esta p&aacute;gina resulta num pedido a respeito de Linux no L40SX.
 </p>
-<p>Em primeiro necessitam da disquete de refer&ecirc;ncia da p&aacute;gina
-de suporte da <a href="http://www.pc.ibm.com/support">IBM</a> ; podem depois
-instalar um sistema DOS e com ajuda de <b>fips</b> n&atilde;o teram problemas
-em repartir o disco; para <a href="http://smalllinux.netpedia.net">mini
-distribu&ccedil;&otilde;es linux</a> necessitam no m&iacute;nimo 20MB,
-mas ser&aacute; melhor come&ccedil;ar logo com 40MB + swap. Talvez queiram
-remover o disco r&iacute;gido por um novo de 2,5 polegadas de altura (cautela
-com o limite de 512).
+<p>Em primeiro necessitam da disquete de refer&ecirc;ncia da p&aacute;gina de suporte da <a href="http://www.pc.ibm.com/support">IBM</a> ; podem depois
+instalar um sistema DOS e com ajuda de <b>fips</b> n&atilde;o teram problemas em repartir o disco; para <a href="http://smalllinux.netpedia.net">mini
+distribu&ccedil;&otilde;es linux</a> necessitam no m&iacute;nimo 20MB, mas ser&aacute; melhor come&ccedil;ar logo com 40MB + swap. Talvez queiram
+remover o disco r&iacute;gido por um novo de 2,5 polegadas de altura (cautela com o limite de 512).
 </p>
-<p>Com 2MB de mem&oacute;ria ser&aacute; muito trabalhoso installar linux;
-mas que tal modificar um chip de 4MB com PARIDADE (1MBx36) e installar
+<p>Com 2MB de mem&oacute;ria ser&aacute; muito trabalhoso installar linux; mas que tal modificar um chip de 4MB com PARIDADE (1MBx36) e installar
 esse no L40SX ? Vejam estas p&aacute;ginas dos <a href="http://members.aol.com/mcapage0/memory01.htm">MCA-Enthusiasts</a>.
 Agradecimentos a Peter H. Wendt, a modifica&ccedil;&atilde;o funciona :-))
 !
 </p>
-<p>Bem, n&atilde;o querem ter trabalho ? Ent&atilde;o &eacute; de copiar
-a vers&atilde;o 0.7 da <a href="http://www.superant.com/smalllinux">Smalllinux</a>
-com o kernel especial da <a href="http://www.debian.org">Debian</a> 1.3.1.
-&Eacute; importante usar estas <a href="http://archive.debian.org/debian-archive/dists/Debian-1.3.1/main/disks-i386/1997-10-13/special/tecra">disquetes
-de arranque</a> para ThinkPads do arquivo da Debian. Porqu&ecirc; ? O L40SX
-tem problemas com qualquer erro no "gate A20" (n&atilde;o me perguntem
-a causa), como tamb&eacute;m acontece a muitos ThinkPads, e n&atilde;o
-funcionar&aacute; com o kernel normal.
+<p>Bem, n&atilde;o querem ter trabalho ? Ent&atilde;o &eacute; de copiar a vers&atilde;o 0.7 da <a href="http://www.superant.com/smalllinux">Smalllinux</a>
+com o kernel especial da <a href="http://www.debian.org">Debian</a> 1.3.1. &Eacute; importante usar estas <a href="http://archive.debian.org/debian-archive/dists/Debian-1.3.1/main/disks-i386/1997-10-13/special/tecra">disquetes
+de arranque</a> para ThinkPads do arquivo da Debian. Porqu&ecirc; ? O L40SX tem problemas com qualquer erro no "gate A20" (n&atilde;o me perguntem
+a causa), como tamb&eacute;m acontece a muitos ThinkPads, e n&atilde;o funcionar&aacute; com o kernel normal.
 </p>
-<p>Escrever as disquetes com <b>rawrite</b> ou <b>dd</b> e leiam as p&aacute;ginas
-de informa&ccedil;&atilde;o do autor como copiar tal sistema para o disco.
-Recordem: &eacute; absolutamente necess&aacute;rio trocar o kernel pelo
-tal da Debian. E n&atilde;o esquecer o disco de suporte, que salvo erro
+<p>Escrever as disquetes com <b>rawrite</b> ou <b>dd</b> e leiam as p&aacute;ginas de informa&ccedil;&atilde;o do autor como copiar tal sistema para o disco.
+Recordem: &eacute; absolutamente necess&aacute;rio trocar o kernel pelo tal da Debian. E n&atilde;o esquecer o disco de suporte, que salvo erro
 s&oacute; existe na vers&atilde;o 0.4 .
 </p>
-<p>Se tentarem outra distribui&ccedil;&atilde;o e a m&aacute;quina n&atilde;o
-qu&ecirc;r arrancar ap&oacute;s a instala&ccedil;&atilde;o, &eacute; de
-experimentar o tal kernel j&aacute; mencionado. Eu uso as disquetes da
-<a href="http://www.debian.org">Debian</a>&nbsp; na vers&atilde;o 1.3.1
-por ser baseada na libc5. Quem j&aacute; tem outra m&aacute;quina com linux
-e CD-ROM tamb&eacute;m tem a possibilidade de criar uma conex&atilde;o
+<p>Se tentarem outra distribui&ccedil;&atilde;o e a m&aacute;quina n&atilde;o qu&ecirc;r arrancar ap&oacute;s a instala&ccedil;&atilde;o, &eacute; de
+experimentar o tal kernel j&aacute; mencionado. Eu uso as disquetes da <a href="http://www.debian.org">Debian</a>&nbsp; na vers&atilde;o 1.3.1
+por ser baseada na libc5. Quem j&aacute; tem outra m&aacute;quina com linux e CD-ROM tamb&eacute;m tem a possibilidade de criar uma conex&atilde;o
 com <b>plip</b> e um cabo "laplink". Para estudiosos h&aacute; ainda <a href="http://www.cs.vu.nl/%7East/minix.html">MINIX.</a>
 </p>
 <p>Enfim, eu modifiquei um m&oacute;dulo de 4MB para actualizar o meu laptop.
 </p>
-<p>Arranjem um m&oacute;dulo PS/2 com 4MB e <i>paridade</i>, verifiquem
-o pino 67 a 70 com um mult&iacute;metro. Os 69 e 70 devem ser ajustados
-ao pino 72; 67 e 68 n&atilde;o devem ter nenhum contacto. Removam ou adicionem
-os resistores (0 ohm) que se encontram em algum lugar no chip com um ferro
+<p>Arranjem um m&oacute;dulo PS/2 com 4MB e <i>paridade</i>, verifiquem o pino 67 a 70 com um mult&iacute;metro. Os 69 e 70 devem ser ajustados
+ao pino 72; 67 e 68 n&atilde;o devem ter nenhum contacto. Removam ou adicionem os resistores (0 ohm) que se encontram em algum lugar no chip com um ferro
 de solda. E j&aacute; est&aacute; pronto !
 </p>
-<p>Esse m&oacute;dulo ainda tem de ser um pouco limado para caber no conector
-de mem&oacute;ria, ou cortam simplesmente aquele nariz no meio do conector.
-Depois de ligar o laptop recebem o erro 164 e agora necessitam de tal disquete
-de refer&ecirc;ncia para actualizar o laptop.&nbsp;
+<p>Esse m&oacute;dulo ainda tem de ser um pouco limado para caber no conector de mem&oacute;ria, ou cortam simplesmente aquele nariz no meio do conector.
+Depois de ligar o laptop recebem o erro 164 e agora necessitam de tal disquete de refer&ecirc;ncia para actualizar o laptop.&nbsp;
 </p>
-<p>No meu laptop o tal m&oacute;dulo trabalha no segundo conector, n&atilde;o
-me perguntem porqu&ecirc;. Duas pe&ccedil;as de 4MB n&atilde;o podem ser
-instaladas e de ainda n&atilde;o ouvi nada de uma modifica&ccedil;&atilde;o
-de um m&oacute;dulo com 8MB.
+<p>No meu laptop o tal m&oacute;dulo trabalha no segundo conector, n&atilde;o me perguntem porqu&ecirc;. Duas pe&ccedil;as de 4MB n&atilde;o podem ser
+instaladas e de ainda n&atilde;o ouvi nada de uma modifica&ccedil;&atilde;o de um m&oacute;dulo com 8MB.
 <br>
 </p>
-<p><b><i>Todos os dados e modifica&ccedil;&otilde;es descritas ser&atilde;o
-efectuadas 'a risco pr&oacute;prio'. O mantedor destas p&aacute;ginas n&atilde;o
+<p><b><i>Todos os dados e modifica&ccedil;&otilde;es descritas ser&atilde;o efectuadas 'a risco pr&oacute;prio'. O mantedor destas p&aacute;ginas n&atilde;o
 dar&aacute; nenhuma garantia por danos!</i></b>
 </p>
-<p>Eu uso um m&oacute;dulo modificado da Kingston com 8 microplaquetas,
-este trabalha; um m&oacute;dulo original da IBM com 3 microplaquetas n&atilde;o
+<p>Eu uso um m&oacute;dulo modificado da Kingston com 8 microplaquetas, este trabalha; um m&oacute;dulo original da IBM com 3 microplaquetas n&atilde;o
 trabalha. &Eacute; de experimentar qual funciona!
 <br>
 <br>
