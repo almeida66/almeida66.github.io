@@ -5,7 +5,7 @@
    <meta name="keywords" content="firewall, freesco">
    <meta name="generator" content="Bluefish 2.2.5" >
    <title>router</title>
-   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="..assets/css/styles.css">
 </head>
 <body>
           <div class="nav">
@@ -20,121 +20,76 @@
     </div>
     <br>
 <h3>
-Security in the internet - <font size=+0>or howto install a firewall router
-at home</font></h3>
+Security in the internet - <font size=+0>or howto install a firewall router at home</font></h3>
 
-<p><br>Think about it:&nbsp; <b><i>Everyone who connects to internet is
-part of World Wide Web!</i></b>
-<br>So you can be hacked. Have a look at <a href="http://www.guninski.com">Georgi
-Guninski</a> demo pages. Here he shows for example your harddisk contents.</p>
-<p>Well, it depends on the used adjustments of your browser and naturally
-which pages you visit. But without Java you won't see very much on display.
-By assignment of dynamic IP addresses by your provider the normal user
-is also further on the safe side.</p>
-<p>The normal user (to which I also count myself) has a computer, standard
-software and modem/ISDN. Everyone, which
-<br>pursues the press releases, hears e.g. of internet attacks on Yahoo,
-download monitoring by Microsoft etc.</p>
-<p>What about the acquisition of a firewall solution ? What is that? Freely
-translated&nbsp; <i>firewall</i> is a protection against unauthorized penetration
-e.g. in a local network. There are many possibilities howto realize this
-from a firewall router
-<br>to proxy firewall.</p>
-<p>What do you need? In this example: 2 network cards, 1 crossover cable
-and a second computer (like 486 with 8MB RAM). Costs approx. 70,- DM and
+<p><br>Think about it:&nbsp; <b><i>Everyone who connects to internet is part of World Wide Web!</i></b>
+<br>So you can be hacked. Have a look at <a href="http://www.guninski.com">Georgi Guninski</a> demo pages. Here he shows for example your harddisk contents.</p>
+<p>Well, it depends on the used adjustments of your browser and naturally which pages you visit. But without Java you won't see very much on display.
+By assignment of dynamic IP addresses by your provider the normal user is also further on the safe side.</p>
+<p>The normal user (to which I also count myself) has a computer, standard software and modem/ISDN. Everyone, which
+<br>pursues the press releases, hears e.g. of internet attacks on Yahoo, download monitoring by Microsoft etc.</p>
+<p>What about the acquisition of a firewall solution ? What is that? Freely translated&nbsp; <i>firewall</i> is a protection against unauthorized penetration
+e.g. in a local network. There are many possibilities howto realize this from a firewall router <br>to proxy firewall.</p>
+<p>What do you need? In this example: 2 network cards, 1 crossover cable and a second computer (like 486 with 8MB RAM). Costs approx. 70,- DM and
 your old computer taken from the cellar : -)</p>
-<p>I'm not a programmer, so I looked for free solutions and found this
-small listing:</p>
+<p>I'm not a programmer, so I looked for free solutions and found this small listing:</p>
 <br>
 <ul>
-<li>
-<a href="http://www.freesco.org">FREESCO</a></li>
+<li><a href="http://www.freesco.org">FREESCO</a></li>
 
-<li>
-<a href="http://www.coyotelinux.com">Coyote</a></li>
+<li><a href="http://www.coyotelinux.com">Coyote</a></li>
 
-<li>
-<a href="http://www.zelow.no/floppyfw/">floppyfw</a></li>
+<li><a href="http://www.zelow.no/floppyfw/">floppyfw</a></li>
 
-<li>
-<a href="http://web.archive.org/web/20020207120108/http://mpsdr.unx.nu/MINI/">Dialup router-MINI</a></li>
+<li><a href="http://web.archive.org/web/20020207120108/http://mpsdr.unx.nu/MINI/">Dialup router-MINI</a></li>
 
-<li>
-<a href="http://web.archive.org/web/20101210013003/http://lightning.prohosting.com/~normr/">normr firewall/router</a></li>
+<li><a href="http://web.archive.org/web/20101210013003/http://lightning.prohosting.com/~normr/">normr firewall/router</a></li>
 
-<li>
-<a href="http://web.archive.org/web/20010308181721/http://edge.fireplug.net/">edge-fireplug</a></li>
-<li>
-etc.</li>
+<li><a href="http://web.archive.org/web/20010308181721/http://edge.fireplug.net/">edge-fireplug</a></li>
+   <a>and newer:</a>
+<li><a href="http://www.pfsense.org">pfsense</a></li>
+<li><a href="http://www.opnsense.org">OPNsense</a></li>
 </ul>
 
-<p><br>The above mentioned programs are naturally :) based on linux, which
-fit on 1 (-3) floppy disk and work even without harddisk. Who absolutely
-wants Microsoft based software, he should try the <a href="http://www.janaserver.de">Jana-server</a>
-. For comparison test the free lightversion of
-<a href="http://www.gnatbox.com">GNATbox</a>
-.</p>
-<p>Who has a second high performance computer, can naturally use a full
-linux distribution to get a similar protection with
-<br><a href="http://www.samba.org">Samba</a>, ipfwadm and tcpd. However
-you decides, I use <a href="http://www.freesco.org">FREESCO</a> and I'm
+<p><br>The above mentioned programs are naturally :) based on linux, which fit on 1 (-3) floppy disk and work even without harddisk. Who absolutely
+wants Microsoft based software, he should try the <a href="http://www.janaserver.de">Jana-server</a>. For comparison test the free lightversion of
+<a href="http://www.gnatbox.com">GNATbox</a>.</p>
+<p>Who has a second high performance computer, can naturally use a full linux distribution to get a similar protection with
+<br><a href="http://www.samba.org">Samba</a>, ipfwadm and tcpd. However you decides, I use <a href="http://www.freesco.org">FREESCO</a> and I'm
 very happy with it.</p>
-<p>FREESCO has the advantage to fit only on one disk and it works already
-with a 386SX. It is recommended to work with 486 and 16MB RAM; I use only
+<p>FREESCO has the advantage to fit only on one disk and it works already with a 386SX. It is recommended to work with 486 and 16MB RAM; I use only
 8MB RAM, but I create swapfile on harddisk.</p>
 <p>How to do?
-<p>Download image, driver and rawrite files to DOS environment and create
-install floppy. Insert networt cards and run configuration; on the small(!)
-computer you need only DOS and modem attached. Boot from floppy and after
-usual root/root identification, run <b>setup</b>.</p>
-<p>Network cards according to 3Com and Ne2000 or compatible are detected,
-otherwise you need the driver file. IRQ adjustments of modern network cards
-are often determined by software. It's recommended to give a fixed address
-like io=0x280, irq=5.</p>
-<p>For use on harddisk just type <b>move2hdd</b>; software is installed
-on a umsdos environment and should be started by execution of&nbsp; <b>router.bat</b>.
+<p>Download image, driver and rawrite files to DOS environment and create install floppy. Insert networt cards and run configuration; on the small(!)
+computer you need only DOS and modem attached. Boot from floppy and after usual root/root identification, run <b>setup</b>.</p>
+<p>Network cards according to 3Com and Ne2000 or compatible are detected, otherwise you need the driver file. IRQ adjustments of modern network cards
+are often determined by software. It's recommended to give a fixed address like io=0x280, irq=5.</p>
+<p>For use on harddisk just type <b>move2hdd</b>; software is installed on a umsdos environment and should be started by execution of&nbsp; <b>router.bat</b>.
 Take care, never edit this files in DOS session!</p>
-<p>The whole configuration is easily and described in developers <a href="http://www.freesco.org">documentation</a>
-. Documentation is not finished yet, because software is still beta, but
+<p>The whole configuration is easily and described in developers <a href="http://www.freesco.org">documentation</a>. Documentation is not finished yet, because software is still beta, but
 works fine for most people.</p>
-<p>The main difficulty is the configuration of clients (here Win9x); I
-also stopped here for first time... You only need to install TCP/IP ! The
-hopefully correctly detected network card needs the following adjustments:
-IP address (192.168.xxx.xxx), at gateway and DNS the IP address of <u>router</u>
-(192.168.xxx.yyy), as domain according to default setting enter <i>inet</i>
-and as hostname e.g. <i>router.inet</i>. The client should also have a
+<p>The main difficulty is the configuration of clients (here Win9x); I also stopped here for first time... You only need to install TCP/IP ! The
+hopefully correctly detected network card needs the following adjustments: IP address (192.168.xxx.xxx), at gateway and DNS the IP address of <u>router</u>
+(192.168.xxx.yyy), as domain according to default setting enter <i>inet</i> and as hostname e.g. <i>router.inet</i>. The client should also have a
 name, entry somewhere under network/identification.</p>
-<p>Thats it. Restart both computer and test the connection with <b>ping</b>
-192.168.xxx.yyy on client. Then start your favorite browser and type router
-address, port 82 (192.168.xxx.yyy:82). Voil&aacute;, the <a href="http://www.acme.com">httpd</a>
-should know be there! Yes, this software offers also an administration
-by webclient. Do you want to test your homepage layout under "real" conditions
-? Then activate httpd under <b>setup/advanced</b> for external world and
+<p>Thats it. Restart both computer and test the connection with <b>ping</b> 192.168.xxx.yyy on client. Then start your favorite browser and type router
+address, port 82 (192.168.xxx.yyy:82). Voil&aacute;, the <a href="http://www.acme.com">httpd</a> should know be there! Yes, this software offers also an administration
+by webclient. Do you want to test your homepage layout under "real" conditions ? Then activate httpd under <b>setup/advanced</b> for external world and
 place your files under /mnt/www.</p>
-<p>At present the software offers the following: DNS -, DHCP -, time-,
-telnet-, web-, print and Remote Access server services.
-<p>For harddisk installation extensions like database
-<a href="http://www.Hughes.com.au">mSQL</a>
-or <a href="http://www.gnome.org">MidnightCommander</a> are possible.
-You may consider the use of&nbsp; libc5-libraries and placing binaries
-under /mnt/router/rc as well as the adjustment of <i>rc_user</i> file.
-The system operates completely in RAM, so root directory
-<b>/</b> is quasi
-virtual and it will be rebuild every restart. All modifications in the
+<p>At present the software offers the following: DNS -, DHCP -, time-, telnet-, web-, print and Remote Access server services.
+<p>For harddisk installation extensions like database <a href="http://www.Hughes.com.au">mSQL</a> or <a href="http://www.gnome.org">MidnightCommander</a> are possible.
+You may consider the use of&nbsp; libc5-libraries and placing binaries under /mnt/router/rc as well as the adjustment of <i>rc_user</i> file.
+The system operates completely in RAM, so root directory <b>/</b> is quasi virtual and it will be rebuild every restart. All modifications in the
 root directory are lost.</p>
-<p>Check out your mini net with <a href="ftp://ftp.porcupine.org/pub/security/index.html">satan</a>,
-<a href="http://www.wwdsi.com/saint">saint</a>
-or <a href="http://www.nessus.org">nessus</a> . And don't forget to change
-all passwords.</p>
+<p>Check out your mini net with <a href="ftp://ftp.porcupine.org/pub/security/index.html">satan</a>, <a href="http://www.wwdsi.com/saint">saint</a>
+or <a href="http://www.nessus.org">nessus</a> . And don't forget to change all passwords.</p>
 <p>Well, sunday afternoon is saved and surfing the WWW is a bit more secure.</p>
 <br>
 <br>
+<p>Pretty old stuff; today I use pfsense as hardware firewall with a Alix thin client. 
 <br>
 <br>
 <br>
-<br>
-<center>
-<p><a href="http://www.freesco.org"><img SRC="../images/freesco.gif" ALT="freesco" NOSAVE BORDER=0 height=60 width=468></a></center>
-</p>
+
 </body>
 </html>
