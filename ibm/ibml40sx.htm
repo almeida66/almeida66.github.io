@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="linux,IBM L40SX, PS/2">
+    <meta name="GENERATOR" content="Mozilla/4.7 [de][Netscape]">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+  </head>
+  <body>
+      <div class="nav">
+      <ul>
+        <li class="linux"><a href="linux.htm">Linux</a></li>
+        <li class="ibml40"><a href="ibml40sx.htm" class="active">IBM L40sx</a></li>
+        <li class="router"><a href="router.htm">Firewall Router</a></li>
+        <li class="mca"><a href="hardware.htm">MCA hardware</a></li>
+        <li class="ppc"><a href="ppc.htm">linux PPC</a></li>
+        <li class="down"><a href="hardware.htm">Downloads</a></li>
+      </ul>
+    </div>
+  <br>
+    <h1>IBM L40SX</h1>
+   
+    <p>Wer kennt ihn nicht, den Schlepptop für den Kofferraum: grau, gross und schwer
+      <br>
+      &nbsp;
+      <br>
+      &nbsp;
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <table frame="box" cellpadding="3" border="2" bgcolor="#99FF99">
+                <tbody>
+                  <tr>
+                    <th>Beschreibung</th>
+                    <th>Inhalt</th>
+                  </tr>
+                  <tr>
+                    <td>Prozessor (MHz)</td>
+                    <td>386SX 20-Mhz</td>
+                  </tr>
+                  <tr>
+                    <td>Bus Architektur</td>
+                    <td>AT Bus</td>
+                  </tr>
+                  <tr>
+                    <td>Arbeitsspeicher (Standard)</td>
+                    <td>2MB</td>
+                  </tr>
+                  <tr>
+                    <td>Arbeitsspeicher (Maximum)</td>
+                    <td>18MB</td>
+                  </tr>
+                  <tr>
+                    <td>Video</td>
+                    <td>LCD-VGA 256</td>
+                  </tr>
+                  <tr>
+                    <td>Disketten-LW</td>
+                    <td>3.5-inch</td>
+                  </tr>
+                  <tr>
+                    <td>Festplatte IDE</td>
+                    <td>80MB</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+            <td><img src="../images/l40sx.jpg" alt="L40sx" nosave="" width="242" height="320"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      &nbsp;
+    </p>
+    <p>Diese Seite resultiert auf eine Anfrage bzgl. Linux auf dem L40SX.
+    </p>
+    <p>Man besorgt sich erst die Referenzdisketten (für alle Faelle) von der <a href="http://www.pc.ibm.com/support">IBM</a>-Support-Seite und
+      installiert eine Minimal-DOSe. Mit der neueren <b>fips</b> Version kann man die Festplatte in bewährter Manier teilen; fuer <a href="http://web.archive.org/web/20040215092119/http://www.fokus.gmd.de/linux/linux-distrib-small.html">mini-Linux
+        Distributionen</a> reichen etwa 20MB, aber es ist extrem knapp bemessen, besser gleich 40MB + Swapbereich einplanen. Wer will, kann eine größere
+      2,5" IDE Festplatte nachrüsten.
+    </p>
+    <p>Mit den Standard 2MB Arbeitsspeicher wird es sehr muehsam, aber man kann ja einen Standard 4MB-PARITY-Chip (1MBx36) umruesten, siehe
+      hierzu die <a href="http://www.mcamafia.de/">MCA-Enthusiasts Page</a>. Mein Dank an Peter H. Wendt, es funktioniert :-))!
+    </p>
+    <p>Lange Rede, hier in Kürze: die Speicher sind ja 72-polig: PIN's 70 und 69 an Masse (Masse=72) legen und die PIN's 68 und 67 oeffnen, d.h.
+      diese duerfen keinen Kontakt haben! Am besten mit einem Ohmmeter messen. Ein Loetkolben mit feiner Spitze muss schon sein, denn die
+      0Ohm-Widerstaende (irgendwo an der Seite) liegen verdammt nahe an den Speicherbausteinen...
+      zur Not hilft ja ein Klebeband, aber der Massekontakt sollte schon geloetet werden.
+    </p>
+    <p>Dann muß noch die Nase der PS/2-Sockel mit einer Spitzzange geschnitten werden, oder man erweitert das Loch des Bausteins mit einer Feile.
+      Reinstecken und starten; die Speicherfehlermeldung erfordert dann die Referenzdiskette einlegen, Abfragen bejahen bzw. manuelle Eingabe zur Überprüfung.
+      Bei mir steckt der Speicher im zweiten Sockel, da im ersten nur ein Teil des Speichers erkannt wurde ??? Die Belegung mit zwei 4MB-Chips soll nicht
+      funktionieren; habe ich nicht getestet... und einen 8MB-Chip habe ich noch nicht. Brauche wohl nicht zu erwaehnen, daß alle Angaben auf
+      eigene Verantwortung und ohne Gewähr sind ;-) ...
+    </p>
+    <p>Zurück zu Linux: ich verwende hierfür die libc5-Distribution von <a href="http://www.de.debian.org">Debian</a>; die Version 1.3.1 ist
+      naemlich schlanker als die neue glibc. Hierzu stehen, auch fuer Thinkpads, <a href="http://archive.debian.org/debian-archive/dists/Debian-1.3.1/main/disks-i386/1997-10-13/special/tecra">Bootdisketten</a>
+      im Archiv des Servers zur Verfügung. Der vorhandene Kernel hat einen speziellen Patch, der einen bestimmten Fehler beim A20-Gate abfängt.
+      Man kann hierzu näheres in den boot-mailing-Listen von Debian, Stichwort "boot panic" erfahren.
+    </p>
+    <p>Mit Debian kann man per <b>plip</b> und "Nullmodem-Kabel" eine Netzwerkverbindung mit einem PC mit CD-ROM erstellen; einige Schwierigkeiten bereiten nur
+      die Einstellungen des Parallelports, die nicht immer dem Standard entsprechen.
+    </p>
+    <p>Hat man schon eine andere Distribution, sollte man diesen gepatchten Kernel mit <b>loadlin</b> laden und es muesste funktionieren.
+      Ansonsten eine Neuinstallation durchfuehren; vielleicht sogar mit den Debian Basis-Disketten base-1(-5).bin und rawrite2 fuer DOSe. Hintenherum
+      funktioniert auch ein anderer Kernel, wenn man es geschafft hat die <b>lilo</b> zu installieren. Klappt aber nicht immer :-( . Hier habe ich den
+      bootloader von <a href="http://www.minix3.org">MINIX</a> verwendet, um Linux zu starten!
+    </p>
+    <p>Mit 2MB wird es schwieriger: da würde ich die mini-Distribution von <a href="http://web.archive.org/web/20121101051622/http://www.superant.com/smalllinux/">Smalllinux
+        </a>in der Version 0.7 plus dem Debian-Kernel versuchen. Hierzu gibt es die Hilfeseiten direkt vom Entwickler. Man kopiert sich die Disketten mit rawrite bzw. dd,
+      tauscht den Kernel gegen besagten Debian-Kernel um und startet... System auf Platte kopieren, bootdisk anpassen, config-files bearbeiten (dummerweise ist bei
+      der mini-Distribution kein editor dabei) und die Support-Diskette der aelteren 0.5 Version nicht vergessen.
+    </p>
+    <p>Und jetzt habe ich eine Frage: Hat jemand eine XF86Config für den L40SX ?
+    </p>
+    <center>
+      <p><img src="../images/mca.gif" alt="MCA Linux" nosave="" width="200" height="100" border="0">
+        <br>
+        <a href="http://www.mcamafia.de/" target="top"><img src="../images/mca2.gif" alt="PS/2" nosave="" width="287" height="60" border="0"></a></p>
+    </center>
+  </body>
+</html>
