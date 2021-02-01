@@ -32,17 +32,17 @@
       Mittlerweile gibt es aber auch Distributionen für Alpha, SPARC, PowerPC und wie sie alle heissen. Da auch MCA-Rechner nicht gerade für den
       normalen Endanwender gedacht waren, steckte hier die Linux-Unterstuetzung noch in den Startloechern.
     </p>
-    <p>Die erste Anlaufstelle ist die <a href="http://web.archive.org/web/20060314031125/http://www.dgmicro.com/mca/default.htm">MCA
+    <p>Die erste Anlaufstelle ist die <a href="http://web.archive.org/web/20060314031125/http://www.dgmicro.com/mca/default.htm" target="_blank">MCA
 Linux Seite</a> von <a href="mailto:dwright@dca.net">Chris Beaureguard</a>.
-      Hier erhält man Kernel-Patches, Boot-Images usw. für alle moeglichen MCA Modelle. Mittlerweile bieten aber einige Distributionen wie <a href="http://www.debian.org">Debian</a>
-      oder <a href="http://www.suse.de">Suse</a> die notwendige MCA und ESDI Unterstuetzung an.
+      Hier erhält man Kernel-Patches, Boot-Images usw. für alle moeglichen MCA Modelle. Mittlerweile bieten aber einige Distributionen wie <a href="http://www.debian.org" target="_blank">Debian</a>
+      oder <a href="http://www.suse.de" target="_blank">Suse</a> die notwendige MCA und ESDI Unterstuetzung an.
       <br>
       &nbsp;
     </p>
     <p>Den ersten Kontakt mit MCA hatte ich mit einem alten IBM 76i, der mit einer SCSI-Karte von Future Domain ausgestattet war. Zu dem Zeitpunkt
       hatte ich kaum was von Micro Channel gehoert. Nach anfaenglichen Versuchen mit Debian 1.3.1 kam ich übers booten nicht hinweg und nichts
       lief.
-      Also ab ins Internet und suchen, suchen ... Da bin ich auf <a href="http://www.mcamafia.de/">Peter Wendt's</a> Seiten gestossen und von da auf die MCA Linux Seite.
+      Also ab ins Internet und suchen, suchen ... Da bin ich auf <a href="http://www.mcamafia.de/" target="_blank">Peter Wendt's</a> Seiten gestossen und von da auf die MCA Linux Seite.
     </p>
     <p>Die Installation verlief dann mit den speziellen boot-Images von Debian 1.3.1 und der Übergabe des Parameters <b>fdomain=0x140,5,ibm</b>
       (IRQ und IO hängt von der jew. Einstellung des SCSI-Controllers ab) problemlos.
@@ -56,19 +56,19 @@ Linux Seite</a> von <a href="mailto:dwright@dca.net">Chris Beaureguard</a>.
       Ja sogar ein <b>fdisk -l</b> kann mit ESDI nichts anfangen; auch <b>lilo</b> arbeitet hier falsch.
     </p>
     <p>Ich verwende mal wieder die Debian 1.3.1, da diese Distribution noch auf der schlanken libc5 basiert. Aber die mitgelieferten
-      Boot-/Rescuedisketten funktionieren nicht. Auf der <a href="http://www.dgmicro.com/mca">MCA Linux</a>
+      Boot-/Rescuedisketten funktionieren nicht. Auf der <a href="http://www.dgmicro.com/mca" target="_blank">MCA Linux</a>
       page findet man einige wenige Anweisungen wie man die <a href="debian.htm">Debian-Installation</a>
       doch zum laufen bringt, aber bei mir war nach dem ersten Neustart erstmal Schluss. Der superblock war nicht lesbar! Normalerweise kein
       Beinbruch (efsck -b 8193 /dev/ed*), aber die Debian-Installationsskripte waren ja noch nicht durchlaufen. Ohne "neuen Root-Passwort" läuft da gar
       nichts, und das System war read-only ... :(
     </p>
-    <p>Und mit 4MB RAM laufen die meisten <a href="http://metalab.unc.edu/pub/Linux/system/recovery">Rettungsdisketten</a> nicht.
+    <p>Und mit 4MB RAM laufen die meisten <a href="http://metalab.unc.edu/pub/Linux/system/recovery" target="_blank">Rettungsdisketten</a> nicht.
     </p>
     <p>Abhilfe schafften die versteckten&nbsp; <a href="../docs/hardware.htm">Installationsdisketten</a>
       für Debian 1.2 auf den MCA Linux-Server, die aber auch mit Debian 1.3.1 funktionieren (aber nicht mit neueren Versionen ab 2.x.x). Dort
       befinden sich auch <a href="../download/MCA-patches-0_1.tgz">Patches</a> für fdisk und lilo.
     </p>
-    <p>Man sollte beim Start die Hilfetexte unter F1 bis F10 gruendlich lesen; dort stehen mehrere <a href="http://metalab.unc.edu/pub/Linux/docs/HOWTO/BootPrompt-HOWTO">appends</a>
+    <p>Man sollte beim Start die Hilfetexte unter F1 bis F10 gruendlich lesen; dort stehen mehrere <a href="http://metalab.unc.edu/pub/Linux/docs/HOWTO/BootPrompt-HOWTO" target="_blank">appends</a>
       für den boot-Prompt!
     </p>
     <p>Die lowmem-Installation startet sofort mit dem bekannten Menue und&nbsp; /dev/eda wird erkannt :)) . Wenn dann alles losgeht, sollte man den
@@ -84,8 +84,8 @@ Linux Seite</a> von <a href="mailto:dwright@dca.net">Chris Beaureguard</a>.
       koennte auch die aktuelle glibc verwenden.
     </p>
     <p>Mit RAM &gt; 4MB kann man X-windows installieren; hierzu gibt es einige
-      <a href="http://web.archive.org/web/20121101051622/http://www.superant.com/smalllinux/">mini-X</a>
-      oder das alte <a href="http://metalab.unc.edu/pub/micro/pc-stuff/Linux/apps/MGR/%21INDEX.html">MGR</a>.
+      <a href="http://web.archive.org/web/20121101051622/http://www.superant.com/smalllinux/" target="_blank">mini-X</a>
+      oder das alte <a href="http://metalab.unc.edu/pub/micro/pc-stuff/Linux/apps/MGR/%21INDEX.html" target="_blank">MGR</a>.
       Letzteres habe ich leider noch nicht zum Laufen gebracht : (
     </p>
     <p>Auch hier ist der <a href="tp700.htm">TP 700</a> etwas eigenwillig:
@@ -94,7 +94,7 @@ Linux Seite</a> von <a href="mailto:dwright@dca.net">Chris Beaureguard</a>.
       eingesetzt werden, dann wird der Video-Speicher nicht richtig erkannt und danach erscheint das Bild doppelt.
     </p>
     <p>Um den Video-Speicher explizit freizugeben gibt es <a href="../download/tpdualscan_elf.gz">tp_dualscan</a>
-      von <i><a href="http://www.semper.org/sirene/people/sti/index.html">M. Steiner</a></i>. Bei
+      von <i><a href="http://www.semper.org/sirene/people/sti/index.html" target="_blank">M. Steiner</a></i>. Bei
       meinem TP arbeitet ein WD90C26, der in der <a href="../download/xf86config.txt">XF86Config</a>
       als WD90C30 mit einer Auflösung von 640x480 bei 100Hz arbeitet. Kleiner Schoenheitsfehler ist das doppelte Bild bei Rueckkehr auf die Konsole.
     </p>
@@ -111,5 +111,6 @@ Linux Seite</a> von <a href="mailto:dwright@dca.net">Chris Beaureguard</a>.
 
           border="0"></p>
     </center>
+    <br>
   </body>
 </html>
